@@ -1,15 +1,19 @@
 <div>
-  <mat-form-field>
-    <input type="text" matInput class="mat-input-element" placeholder="用户名"/>
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <input type="password" matInput class="mat-input-element" placeholder="密码"/>
-  </mat-form-field>
-  <br>
-  <mat-checkbox labelPosition="after">
-    <label>记住密码</label>
-  </mat-checkbox>
-  <br>
-  <button mat-raised-button color="primary">登陆</button>
+  <div>
+    <form class="login-container">
+      <mat-form-field class="in">
+        <input type="text" matInput class="mat-input-element" placeholder="用户名"/>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="in">
+        <input type="password" matInput class="mat-input-element" placeholder="密码"/>
+      </mat-form-field>
+      <br>
+      <mat-checkbox labelPosition="after">
+        <label>记住密码</label>
+      </mat-checkbox>
+      <br>
+      <button mat-raised-button color="primary" class="login-button">登陆</button>
+      </form>
+  </div>
 </div>
