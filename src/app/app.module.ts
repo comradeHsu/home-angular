@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CommonModule } from './common/common.module';
+import {RouteModule} from './route.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommonModule } from './common/common.module';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    CommonModule
+    CommonModule,
+    RouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
