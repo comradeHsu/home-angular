@@ -1,12 +1,12 @@
 <div>
   <div>
     <form (ngSubmit)="onSubmit()" class="login-container">
-      <mat-form-field class="in" [(ngModel)]="username">
-        <input type="text" matInput class="mat-input-element" placeholder="用户名"/>
+      <mat-form-field class="in">
+        <input type="text" matInput [(ngModel)]="username" name="username" class="mat-input-element" placeholder="用户名"/>
       </mat-form-field>
       <br>
-      <mat-form-field class="in" [(ngModel)]="password">
-        <input type="password" matInput class="mat-input-element" placeholder="密码"/>
+      <mat-form-field class="in">
+        <input type="password" matInput  [(ngModel)]="password" name="password" class="mat-input-element" placeholder="密码"/>
       </mat-form-field>
       <br>
       <mat-checkbox labelPosition="after">
