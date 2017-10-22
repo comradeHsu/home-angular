@@ -6,6 +6,7 @@ import {Http} from '@angular/http';
 import {Constant} from '../common/constant';
 import {User} from '../model/user';
 import {Response} from '../model/response';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthService {
