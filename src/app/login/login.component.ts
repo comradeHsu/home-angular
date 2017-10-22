@@ -1,4 +1,6 @@
-import { Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
+import {Router} from '@angular/router';
+import {Auth} from '../model/auth';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +13,19 @@ export class LoginComponent {
 
   password = '';
 
-  constructor() { }
+  auth: Auth;
+
+  constructor(@Inject('auth') private service, private router: Router) { }
 
   onSubmit() {
-    console.log(this.username, this.password);
+    this.service.login(this.username, this.password)
+      .subscribe(auth => {
+        this.auth = Object.assign({}, auth);
+        if(!auth.hasError) {
+          // 路由跳转
+          this.router.navigate(['todo']);
+        }
+        });
   }
 
 }

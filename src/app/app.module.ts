@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CommonModule } from './common/common.module';
 import {RouteModule} from './route.module';
+import {AuthService} from './service/auth.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import {RouteModule} from './route.module';
     CommonModule,
     RouteModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'auth', useClass: AuthService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
