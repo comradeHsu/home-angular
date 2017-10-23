@@ -8,11 +8,11 @@ import {NgModule} from '@angular/core';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'admin/login',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
-    path: 'admin/login',
+    path: 'login',
     component: LoginComponent
   }
 ];

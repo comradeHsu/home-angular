@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { CommonModule } from './common/common.module';
 import {RouteModule} from './route.module';
 import {AuthService} from './service/auth.service';
+import {AdminModule} from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {AuthService} from './service/auth.service';
     HttpModule,
     BrowserAnimationsModule,
     CommonModule,
-    RouteModule
+    RouteModule,
+    AdminModule
   ],
   providers: [
     {provide: 'auth', useClass: AuthService}
