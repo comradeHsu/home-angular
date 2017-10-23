@@ -11,6 +11,8 @@ export class LoginComponent {
 
   photo = '/assets/back.jpg';
 
+  photos = ['/assets/back.jpg', '/assets/back1.jpg', '/assets/back2.jpg', '/assets/back3.jpg'];
+
   username = '';
 
   password = '';
@@ -28,6 +30,12 @@ export class LoginComponent {
           this.router.navigate(['todo']);
         }
         });
+  }
+
+  toggleImg() {
+    let index = Math.floor(Math.random() * this.photos.length);
+    this.photo = this.photos[index];
+    console.log(index);
   }
 
 }
