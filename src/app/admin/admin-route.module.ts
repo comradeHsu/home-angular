@@ -1,6 +1,5 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {AdminComponent} from './admin.component';
 import { AdminUserListComponent } from './admin-user-list/admin-user-list.component';
 import { AdminRentListComponent } from './admin-rent-list/admin-rent-list.component';
 import { AdminRentAddComponent } from './admin-rent-add/admin-rent-add.component';
@@ -14,8 +13,8 @@ import { AdminHouseAddComponent } from './admin-house-add/admin-house-add.compon
 const routes: Routes = [
   {
     path: 'admin/userList',
-    canActivate: [],
-    component: AdminComponent
+    // canActivate: [],
+    component: AdminUserListComponent
   }
 ];
 
