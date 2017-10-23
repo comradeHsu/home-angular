@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminMenuComponent } from './admin-menu/admin-menu.component';
+import { AdminMenuComponent } from './admin-menu.component';
 
 @NgModule({
   imports: [
