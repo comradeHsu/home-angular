@@ -2,11 +2,16 @@
   <div>
     <form (ngSubmit)="onSubmit()" class="login-container">
       <mat-form-field class="in">
-        <input type="text" matInput [(ngModel)]="username" name="username" class="mat-input-element" placeholder="用户名"/>
+        <input type="text" matInput [(ngModel)]="username" name="username" class="mat-input-element" placeholder="用户名" required/>
+        <mat-error>用户名不能为空</mat-error>
       </mat-form-field>
+      <div *ngIf="auth?.hasError" >
+        {{auth?.errMsg}}
+      </div>
       <br>
       <mat-form-field class="in">
-        <input type="password" matInput  [(ngModel)]="password" name="password" class="mat-input-element" placeholder="密码"/>
+        <input type="password" matInput  [(ngModel)]="password" name="password" class="mat-input-element" placeholder="密码" required/>
+        <mat-error>密码不能为空</mat-error>
       </mat-form-field>
       <br>
       <mat-checkbox labelPosition="after">
