@@ -9,6 +9,8 @@ import {Auth} from '../model/auth';
 })
 export class LoginComponent {
 
+  photo = '/assets/back.jpg';
+
   username = '';
 
   password = '';
