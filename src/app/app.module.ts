@@ -6,7 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { CommonModule } from './common/common.module';
+import { CommonsModule } from './common/commons.module';
 import {RouteModule} from './route.module';
 import {AuthService} from './service/auth.service';
 import {AdminModule} from './admin/admin.module';
@@ -21,7 +21,7 @@ import {AdminModule} from './admin/admin.module';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    CommonModule,
+    CommonsModule,
     RouteModule,
     AdminModule
   ],

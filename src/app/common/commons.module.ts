@@ -22,4 +22,4 @@ import {MatSidenavModule} from '@angular/material';
     MatSidenavModule
   ]
 })
-export class CommonModule { }
+export class CommonsModule { }
