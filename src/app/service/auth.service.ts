@@ -19,7 +19,7 @@ export class AuthService {
 
   login(username: string, password: string): Observable<Auth> {
     const url = `${Constant.API_URL}/api/login`;
-    let user = new User(username, password);
+    let user = new User().build(username, password);
     return this.http.post(url, user)
       .map(res => {
         let response =  res.json() as Response;

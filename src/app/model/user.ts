@@ -6,8 +6,12 @@ export class User {
   username: string;
   password: string;
 
-  constructor(username: string, password: string) {
+  constructor() {
+  }
+
+  build(username: string, password: string): User {
     this.username = username;
     this.password = password;
+    return this;
   }
 }
