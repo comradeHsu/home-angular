@@ -16,19 +16,24 @@ const routes: Routes = [
     path: 'admin/userList',
     // canActivate: [],
     component: AdminUserListComponent
+  },
+  {
+    path: 'admin',
+    // canActivate: [],
+    component: AdminComponent
   }
 ];
 
 @NgModule({
   imports: [ RouterModule.forChild(routes) ],
-  exports: [ RouterModule ],
-  declarations: [
-    AdminUserListComponent,
-    AdminRentListComponent,
-    AdminRentAddComponent,
-    AdminHouseListComponent,
-    AdminHouseAddComponent,
-    AdminComponent
-  ]
+  exports: [ RouterModule ]
+  // declarations: [
+  //   AdminUserListComponent,
+  //   AdminRentListComponent,
+  //   AdminRentAddComponent,
+  //   AdminHouseListComponent,
+  //   AdminHouseAddComponent,
+  //   AdminComponent
+  // ]
 })
 export class AdminRouteModule { }

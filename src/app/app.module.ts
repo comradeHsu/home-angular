@@ -10,13 +10,11 @@ import { CommonsModule } from './common/commons.module';
 import {RouteModule} from './route.module';
 import {AuthService} from './service/auth.service';
 import {AdminModule} from './admin/admin.module';
-import {AdminComponent} from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    AdminComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

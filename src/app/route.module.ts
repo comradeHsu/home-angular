@@ -1,7 +1,6 @@
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {NgModule} from '@angular/core';
-import {AdminComponent} from "./admin/admin.component";
 /**
  * Created by xuhui on 2017/10/20.
  */
@@ -9,7 +8,7 @@ import {AdminComponent} from "./admin/admin.component";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'admin/userList',
+    redirectTo: 'admin',
     pathMatch: 'full'
   },
   {
@@ -18,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    redirectTo: 'admin/userList'
+    redirectTo: 'admin'
   }
 ];
 
