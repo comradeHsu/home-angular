@@ -1,0 +1,11 @@
+.content{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+/*.sidnav{*/
+  /*height: 400px;*/
+  /*width: 200px;*/
+  /*padding:20px;*/
+/*}*/

@@ -1,7 +1,17 @@
-<mat-sidenav-container>
-  <mat-sidenav mode="push" opened="true">Drawer content</mat-sidenav>
+<mat-sidenav-container >
+  <mat-sidenav mode="push" opened="true" #sidenav class="sidnav">
+    <mat-list>
+      <mat-list-item> Pepper </mat-list-item>
+      <mat-list-item> Salt </mat-list-item>
+      <mat-list-item> Paprika </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
 
-  <div class="my-content">Main content</div>
+  <div class="content" >
+    <button  type="button" (click)="sidenav.open()" >
+    Main content
+    </button >
+  </div>
 
   <!-- primary content -->
 </mat-sidenav-container>

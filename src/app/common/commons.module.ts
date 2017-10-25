@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {MatRadioModule} from '@angular/material';
-import {MatSidenavModule} from '@angular/material';
+import {MatSidenavModule, MatListModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -10,7 +10,8 @@ import {MatSidenavModule} from '@angular/material';
     MatCheckboxModule,
     MatInputModule,
     MatRadioModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
   declarations: [],
   exports: [
@@ -19,7 +20,8 @@ import {MatSidenavModule} from '@angular/material';
     MatCheckboxModule,
     MatInputModule,
     MatRadioModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ]
 })
 export class CommonsModule { }
