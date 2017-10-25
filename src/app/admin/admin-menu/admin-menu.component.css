@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
 }
-/*.sidnav{*/
-  /*height: 400px;*/
-  /*width: 200px;*/
-  /*padding:20px;*/
-/*}*/
+.sidnav{
+  height: 400px;
+  width: 200px;
+  padding:20px;
+}
