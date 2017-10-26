@@ -3,6 +3,7 @@ import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule} 
 import {MatRadioModule} from '@angular/material';
 import {MatSidenavModule, MatListModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
+import {MatToolbarModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import {MatIconModule} from '@angular/material';
     MatRadioModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ],
   declarations: [],
   exports: [
@@ -24,7 +26,8 @@ import {MatIconModule} from '@angular/material';
     MatRadioModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ]
 })
 export class CommonsModule { }
