@@ -49,6 +49,9 @@ ul{
   transition: transform .3s;
   font-size: 12px;
 }
-.leftIcon{
-  margin-top: -17px;
+.menu-item{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 45px;
+  min-width: 200px;
 }

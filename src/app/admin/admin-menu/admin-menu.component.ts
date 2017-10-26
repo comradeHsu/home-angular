@@ -8,7 +8,8 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./admin-menu.component.css']
 })
 export class AdminMenuComponent implements OnInit {
-  opened = true;
+  icon = 'keyboard_arrow_up';
+  hide = 'none';
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'down',
@@ -18,8 +19,13 @@ export class AdminMenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  openChanged() {
-    this.opened = !this.opened;
+  toggle() {
+    if (this.icon === 'keyboard_arrow_up') {
+      this.icon = 'keyboard_arrow_down';
+    } else {
+      this.icon = 'keyboard_arrow_up';
+    }
+    this.hide = 'block';
   }
 
 }
