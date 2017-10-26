@@ -1,5 +1,5 @@
 <div [ngStyle]="{'background-image': 'url(' + photo + ')'}" id="main" (click)="toggleImg()" >
-  <div>
+  <div (click)="$event.stopPropagation()">
     <form (ngSubmit)="onSubmit()" class="login-container">
       <mat-form-field class="in">
         <input type="text" matInput [(ngModel)]="username" name="username" class="mat-input-element" placeholder="用户名" required/>
