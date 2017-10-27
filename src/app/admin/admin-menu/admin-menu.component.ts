@@ -9,7 +9,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class AdminMenuComponent implements OnInit {
   icon = 'keyboard_arrow_up';
-  hide = 'none';
+  hide = false;
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'down',
@@ -25,7 +25,8 @@ export class AdminMenuComponent implements OnInit {
     } else {
       this.icon = 'keyboard_arrow_up';
     }
-    this.hide = 'block';
+    this.hide = !this.hide;
+    console.log(this.hide);
   }
 
 }
