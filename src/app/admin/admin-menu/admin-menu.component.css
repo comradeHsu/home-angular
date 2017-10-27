@@ -40,6 +40,7 @@ ul{
   margin: 0;
   padding-left: 0;
   background-color: #eef1f6;
+  height: 100%;
 }
 .icon{
   position: absolute;
@@ -52,9 +53,18 @@ ul{
 .menu-item{
   height: 50px;
   line-height: 50px;
-  padding: 0 45px;
+  padding: 0 30px;
   min-width: 200px;
+  color: #48576a;
+  width: 150px;
+  display: inline;
 }
 .right{
 
+}
+.desc{
+
+}
+.hide{
+  height: 300px;
 }

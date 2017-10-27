@@ -23,12 +23,13 @@
     <li>
       <div class="menu">
         <mat-icon class="material-icons">keyboard_arrow_up</mat-icon>
-        <span>买卖管理</span>
+        <span class="desc">买卖管理</span>
         <!--<mat-icon class="icon" svgIcon="down"></mat-icon >-->
         <mat-icon class="material-icons right" (click)="toggle()">{{icon}}</mat-icon>
       </div>
-      <ul class="menu" *ngIf="hide">
+      <ul class="menu hide" *ngIf="hide">
         <li class="menu-item">租赁列表</li>
+        <br>
         <li class="menu-item">添加房产</li>
       </ul>
     </li>
