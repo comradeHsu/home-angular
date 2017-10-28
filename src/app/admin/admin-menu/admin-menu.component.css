@@ -51,7 +51,7 @@ ul{
   font-size: 12px;
 }
 .menu-item{
-  height: 50px;
+  height: 57px;
   line-height: 50px;
   padding: 0 30px;
   min-width: 200px;
@@ -66,5 +66,12 @@ ul{
 
 }
 .hide{
-  height: 300px;
+  height: 114px;
+}
+.single{
+  height: 57px;
+}
+.button{
+  width: 24px;
+  height: 24px;
 }
