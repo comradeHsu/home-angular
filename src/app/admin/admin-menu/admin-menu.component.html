@@ -22,10 +22,10 @@
   <ul>
     <li>
       <div class="menu">
-        <mat-icon class="material-icons">keyboard_arrow_up</mat-icon>
+        <mat-icon class="material-icons no-click">folder_shared</mat-icon>
         <span class="desc">租赁管理</span>
         <!--<mat-icon class="icon" svgIcon="down"></mat-icon >-->
-        <button mat-raised-button class="button">
+        <button mat-icon-button class="button">
         <mat-icon  class="material-icons right" (click)="toggle(0)">{{icon[0]}}</mat-icon>
         </button>
       </div>
@@ -37,10 +37,12 @@
     </li>
     <li>
       <div class="menu">
-        <mat-icon class="material-icons">keyboard_arrow_up</mat-icon>
+        <mat-icon class="material-icons">location_city</mat-icon>
         <span class="desc">买卖管理</span>
         <!--<mat-icon class="icon" svgIcon="down"></mat-icon >-->
+        <button mat-icon-button class="button">
         <mat-icon class="material-icons right" (click)="toggle(1)">{{icon[1]}}</mat-icon>
+        </button>
       </div>
       <ul class="menu hide" *ngIf="hide[1]">
         <li class="menu-item">房产列表</li>
@@ -50,10 +52,11 @@
     </li>
     <li>
       <div class="menu">
-        <mat-icon class="material-icons">keyboard_arrow_up</mat-icon>
+        <mat-icon class="material-icons">group</mat-icon>
         <span class="desc">用户管理</span>
-        <!--<mat-icon class="icon" svgIcon="down"></mat-icon >-->
+        <button mat-icon-button class="button">
         <mat-icon class="material-icons right" (click)="toggle(2)">{{icon[2]}}</mat-icon>
+        </button>
       </div>
       <ul class="menu single" *ngIf="hide[2]">
         <li class="menu-item">用户列表</li>

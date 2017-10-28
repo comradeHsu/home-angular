@@ -7,7 +7,7 @@
 .sidnav{
   float: left;
   box-sizing: border-box;
-  width: 150px;
+  width: 200px;
 }
 #title{
   height: 60px;
@@ -59,12 +59,6 @@ ul{
   width: 150px;
   display: inline;
 }
-.right{
-
-}
-.desc{
-
-}
 .hide{
   height: 114px;
 }
@@ -72,6 +66,8 @@ ul{
   height: 57px;
 }
 .button{
-  width: 24px;
-  height: 24px;
+  margin-left: 40px;
+}
+.no-click{
+
 }
