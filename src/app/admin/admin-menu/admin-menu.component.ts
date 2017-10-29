@@ -10,6 +10,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class AdminMenuComponent implements OnInit {
   icon = ['keyboard_arrow_up', 'keyboard_arrow_up', 'keyboard_arrow_up'];
   hide = [false, false, false];
+  color = '#eef1f6';
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'down',
@@ -26,6 +27,14 @@ export class AdminMenuComponent implements OnInit {
       this.icon[index] = 'keyboard_arrow_up';
     }
     this.hide[index] = !this.hide[index];
+  }
+
+  mouseMove() {
+    this.color = '#6b9dae';
+  }
+
+  mouseOut() {
+    this.color = '#eef1f6';
   }
 
 }

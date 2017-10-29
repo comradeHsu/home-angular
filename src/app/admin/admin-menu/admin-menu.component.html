@@ -20,8 +20,8 @@
 <div id="title">房产后台管理</div>
 <div class="sidnav">
   <ul>
-    <li>
-      <div class="menu">
+    <li (mouseover)="mouseMove()" (mouseout)="mouseOut()">
+      <div class="menu" [ngStyle]="{'background-color':color}" >
         <mat-icon class="material-icons no-click">folder_shared</mat-icon>
         <span class="desc">租赁管理</span>
         <!--<mat-icon class="icon" svgIcon="down"></mat-icon >-->
