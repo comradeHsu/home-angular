@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 
@@ -29,12 +29,12 @@ export class AdminMenuComponent implements OnInit {
     this.hide[index] = !this.hide[index];
   }
 
-  mouseMove() {
-    this.color = '#6b9dae';
+  mouseMove(item: Element) {
+    item.setAttribute('style', 'background-color:#6b9dae');
   }
 
-  mouseOut() {
-    this.color = '#eef1f6';
+  mouseOut(item: Element) {
+    item.setAttribute('style', 'background-color:#eef1f6');
   }
 
 }

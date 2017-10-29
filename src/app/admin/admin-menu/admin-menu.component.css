@@ -51,13 +51,13 @@ ul{
   font-size: 12px;
 }
 .menu-item{
-  height: 57px;
   line-height: 50px;
   padding: 0 30px;
   min-width: 200px;
   color: #48576a;
   width: 150px;
   display: inline;
+  margin-left: 9px;
 }
 .hide{
   height: 114px;
@@ -70,4 +70,9 @@ ul{
 }
 .no-click{
 
+}
+.li-item{
+  height: 57px;
+  width: 200px;
+  margin-left: -9px;
 }
