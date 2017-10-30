@@ -8,6 +8,8 @@
   float: left;
   box-sizing: border-box;
   width: 200px;
+  height: 900px;
+  background-color: #eef1f6;
 }
 #title{
   height: 60px;
@@ -77,6 +79,7 @@ ul{
   height: 57px;
   width: 200px;
   margin-left: -9px;
+  background-color: #bfcde8;
 }
 .banner{
   line-height: 60px;
