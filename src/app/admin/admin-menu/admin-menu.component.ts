@@ -63,5 +63,4 @@ export class AdminMenuComponent implements OnInit {
       ele.setAttribute('style', 'background-color:#eef1f6');
     }
   }
-
 }
