@@ -17,6 +17,8 @@
   border-color: hsla(62,77%,76%,.3);
   border-right-width: 1px;
   border-right-style: solid;
+  background-color: #00BCD4;
+  margin-top: -6px;
 }
 .menu{
   height: 57px;
@@ -75,4 +77,9 @@ ul{
   height: 57px;
   width: 200px;
   margin-left: -9px;
+}
+.banner{
+  line-height: 60px;
+  text-shadow: 5px 5px 5px #6b2d38;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
