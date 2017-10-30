@@ -63,7 +63,7 @@ ul{
   line-height: 50px;
   padding: 0 30px;
   min-width: 200px;
-  color: #48576a;
+  /*color: #48576a;*/
   width: 150px;
   display: inline;
   margin-left: 9px;
@@ -84,7 +84,6 @@ ul{
   height: 57px;
   width: 200px;
   margin-left: -9px;
-  background-color: #bfcde8;
 }
 .banner{
   line-height: 60px;

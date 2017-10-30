@@ -8,7 +8,7 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./admin-menu.component.css']
 })
 export class AdminMenuComponent implements OnInit {
-  icon = ['keyboard_arrow_up', 'keyboard_arrow_up', 'keyboard_arrow_up'];
+  icon = ['arrow_drop_down', 'arrow_drop_down', 'arrow_drop_down'];
   hide = [false, false, false];
   color = '#eef1f6';
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
@@ -38,10 +38,10 @@ export class AdminMenuComponent implements OnInit {
   }
 
   toggle(index: number) {
-    if (this.icon[index] === 'keyboard_arrow_up') {
-      this.icon[index] = 'keyboard_arrow_down';
+    if (this.icon[index] === 'arrow_drop_down') {
+      this.icon[index] = 'arrow_drop_up';
     } else {
-      this.icon[index] = 'keyboard_arrow_up';
+      this.icon[index] = 'arrow_drop_down';
     }
     this.hide[index] = !this.hide[index];
   }
