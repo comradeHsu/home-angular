@@ -19,10 +19,10 @@
       rel="stylesheet">
 <div id="title">房产后台管理</div>
 <div class="sidnav">
-  <ul>
+  <ul  #ui (ng-init)="initable(ui)">
     <li >
-      <div class="menu" #div (mouseover)="mouseMove(div)" (mouseout)="mouseOut(div)">
-        <mat-icon class="material-icons no-click">folder_shared</mat-icon>
+      <div class="menu able">
+        <mat-icon class="material-icons no-click able">folder_shared</mat-icon>
           <span class="desc">租赁管理</span>
         <!--<mat-icon class="icon" svgIcon="down"></mat-icon >-->
           <button mat-icon-button class="button">
@@ -30,16 +30,16 @@
           </button>
       </div>
       <ul class="menu hide" *ngIf="hide[0]">
-        <div #item1 (mouseover)="mouseMove(item1)" (mouseout)="mouseOut(item1)" class="li-item">
+        <div  class="li-item" #item1 (mouseover)="mouse($event,item1)" (mouseout)="mouse($event,item1)">
           <li class="menu-item" >租赁列表</li>
         </div>
-        <div #item2 (mouseover)="mouseMove(item2)" (mouseout)="mouseOut(item2)" class="li-item">
+        <div class="li-item" #item2 (mouseover)="mouse($event,item2)" (mouseout)="mouse($event,item2)">
           <li class="menu-item"  >添加房产</li>
         </div>
       </ul>
     </li>
     <li>
-      <div class="menu" #div1 (mouseover)="mouseMove(div1)" (mouseout)="mouseOut(div1)">
+      <div class="menu able">
         <mat-icon class="material-icons">location_city</mat-icon>
           <span class="desc">买卖管理</span>
           <button mat-icon-button class="button">
@@ -47,24 +47,24 @@
           </button>
       </div>
       <ul class="menu hide" *ngIf="hide[1]">
-        <div #item3 (mouseover)="mouseMove(item3)" (mouseout)="mouseOut(item3)" class="li-item">
+        <div class="li-item" #item3 (mouseover)="mouse($event,item3)" (mouseout)="mouse($event,item3)">
           <li class="menu-item">房产列表</li>
         </div>
-        <div #item4 (mouseover)="mouseMove(item4)" (mouseout)="mouseOut(item4)" class="li-item">
+        <div class="li-item" #item4 (mouseover)="mouse($event,item4)" (mouseout)="mouse($event,item4)">
           <li class="menu-item">添加房产</li>
         </div>
       </ul>
     </li>
     <li>
-      <div class="menu" #div2 (mouseover)="mouseMove(div2)" (mouseout)="mouseOut(div2)">
-        <mat-icon class="material-icons">group</mat-icon>
+      <div class="menu able">
+        <mat-icon class="material-icon">group</mat-icon>
           <span class="desc">用户管理</span>
           <button mat-icon-button class="button">
             <mat-icon class="material-icons right" (click)="toggle(2)">{{icon[2]}}</mat-icon>
           </button>
       </div>
       <ul class="menu single" *ngIf="hide[2]">
-        <div #item5 (mouseover)="mouseMove(item5)" (mouseout)="mouseOut(item5)" class="li-item">
+        <div class="li-item" #item5 (mouseover)="mouse($event,item5)" (mouseout)="mouse($event,item5)">
           <li class="menu-item">用户列表</li>
         </div>
       </ul>
