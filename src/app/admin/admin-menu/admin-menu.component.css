@@ -22,6 +22,11 @@
   background-color: #00BCD4;
   margin-top: -6px;
 }
+.title-left{
+  height: 60px;
+  width: 200px;
+  margin-left: -19px;
+}
 .menu{
   height: 57px;
   line-height: 56px;
@@ -85,6 +90,7 @@ ul{
   line-height: 60px;
   text-shadow: 5px 5px 5px #6b2d38;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-left: 28px;
 }
 #docker{
   background-color: rgba(0, 255, 20, 0.48);
