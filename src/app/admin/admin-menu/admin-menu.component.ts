@@ -1,6 +1,8 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
 
 
 @Component({
@@ -37,8 +39,7 @@ export class AdminMenuComponent implements OnInit {
       });
     }
   }
-
-  users = ['position', 'name', 'weight', 'symbol'];
+  users = [ 'position', 'name', 'weight', 'symbol'];
 
   toggle(index: number) {
     if (this.icon[index] === 'arrow_drop_down') {
@@ -66,4 +67,5 @@ export class AdminMenuComponent implements OnInit {
       ele.setAttribute('style', 'background-color:#eef1f6');
     }
   }
+
 }
