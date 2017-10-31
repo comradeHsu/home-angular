@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-admin-menu',
   templateUrl: './admin-menu.component.html',
@@ -36,6 +37,8 @@ export class AdminMenuComponent implements OnInit {
       });
     }
   }
+
+  users = ['position', 'name', 'weight', 'symbol'];
 
   toggle(index: number) {
     if (this.icon[index] === 'arrow_drop_down') {

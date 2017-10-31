@@ -27,7 +27,7 @@
     <li >
       <div class="menu able">
         <mat-icon class="material-icons no-click able">folder_shared</mat-icon>
-          <span class="desc">租赁管理</span>
+          <span>租赁管理</span>
         <!--<mat-icon class="icon" svgIcon="down"></mat-icon >-->
           <button mat-icon-button class="button">
             <mat-icon  class="material-icons right" (click)="toggle(0)">{{icon[0]}}</mat-icon>
@@ -45,7 +45,7 @@
     <li>
       <div class="menu able">
         <mat-icon class="material-icons">location_city</mat-icon>
-          <span class="desc">买卖管理</span>
+          <span>买卖管理</span>
           <button mat-icon-button class="button">
             <mat-icon class="material-icons right" (click)="toggle(1)">{{icon[1]}}</mat-icon>
           </button>
@@ -62,7 +62,7 @@
     <li>
       <div class="menu able">
         <mat-icon class="material-icon">group</mat-icon>
-          <span class="desc">用户管理</span>
+          <span>用户管理</span>
           <button mat-icon-button class="button">
             <mat-icon class="material-icons right" (click)="toggle(2)">{{icon[2]}}</mat-icon>
           </button>
@@ -75,4 +75,52 @@
     </li>
   </ul>
 </div>
-<div id="docker"></div>
+<div id="docker">
+  <div class="header">
+    <strong class="desc">用户列表</strong>
+    <div class="location">
+      <span>用户管理 ：</span>
+      <span>用户列表</span>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="toobar">
+      <mat-form-field class="in">
+        <input type="text" matInput  name="name" class="mat-input-element" placeholder="姓名"/>
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="mrb" type="button">查询</button>
+      <button mat-raised-button color="primary" class="mrb" type="button">新增</button>
+    </div>
+    <div class="example-container mat-elevation-z8">
+      <mat-table #table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+        </ng-container>
+
+        <!-- Color Column -->
+        <ng-container matColumnDef="symbol">
+          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="users"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+
+  </div>
+</div>
