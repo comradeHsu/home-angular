@@ -115,6 +115,9 @@ ul{
   height: 800px;
   background-color: white;
 }
+.toobar{
+  background-color: rgba(174, 213, 129, 0.38);
+}
 .in{
   padding-left: 20px;
   padding-top: 10px;
@@ -122,14 +125,5 @@ ul{
 .mrb{
   margin-left: 30px;
 }
-.example-container {
-  display: flex;
-  flex-direction: column;
-  max-height: 500px;
-  min-width: 300px;
-}
-.mat-table {
-  overflow: auto;
-  max-height: 500px;
-}
+
 
