@@ -88,16 +88,28 @@
 
       <mat-form-field class="in">
         <span  matPrefix> +86&nbsp; </span>
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="房东电话" required/>
+        <input matInput name="title" class="mat-input-element" placeholder="房东电话" required
+               [formControl]="phoneFormControl"/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
-        <mat-error>电话不能为空</mat-error>
+        <mat-error *ngIf="phoneFormControl.hasError('pattern')">
+          请输入合法的手机号
+        </mat-error>
+        <mat-error *ngIf="phoneFormControl.hasError('required')">
+          手机号不能为空
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
         <span  matPrefix> +86&nbsp; </span>
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="业务员电话" required/>
+        <input matInput name="title" class="mat-input-element" placeholder="业务员电话" required
+               [formControl]="phoneFormControl"/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
-        <mat-error>不能为空</mat-error>
+        <mat-error *ngIf="phoneFormControl.hasError('pattern')">
+          请输入合法的手机号
+        </mat-error>
+        <mat-error *ngIf="phoneFormControl.hasError('required')">
+          手机号不能为空
+        </mat-error>
       </mat-form-field>
 
     </form>

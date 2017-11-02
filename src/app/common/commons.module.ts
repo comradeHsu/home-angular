@@ -4,6 +4,7 @@ import {MatRadioModule} from '@angular/material';
 import {MatSidenavModule, MatListModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import {MatToolbarModule} from '@angular/material';
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ],
   declarations: [],
   exports: [
@@ -29,7 +31,8 @@ import {MatToolbarModule} from '@angular/material';
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ]
 })
 export class CommonsModule { }
