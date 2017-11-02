@@ -1,0 +1,40 @@
+#docker{
+  background-color: rgba(0, 255, 20, 0.48);
+  float: left;
+  width: 84.5%;
+  height: 90%;
+}
+.header{
+  height:20px;
+  padding-top: 15px;
+}
+.desc{
+  width:200px;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 20px;
+  line-height: 20px;
+}
+.location{
+  float: right;
+  padding-right: 15px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.content-wrapper{
+  height: 800px;
+  background-color: white;
+}
+.toobar{
+  background-color: rgba(174, 213, 129, 0.38);
+}
+.in{
+  padding-left: 120px;
+  width: 70%;
+  margin-top: -10px;
+}
+form:first-child{
+  padding-top: 10px;
+}
+.mrb{
+  margin-left: 30px;
+}
