@@ -13,14 +13,23 @@ import { AdminComponent } from './admin.component';
  */
 const routes: Routes = [
   {
-    path: 'admin/userList',
-    // canActivate: [],
-    component: AdminUserListComponent
-  },
-  {
     path: 'admin',
-    // canActivate: [],
-    component: AdminComponent
+    component: AdminComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'userList',
+        pathMatch: 'full'
+      },
+      {
+        path: 'userList',
+        component: AdminUserListComponent
+      },
+      {
+        path: 'addHouse',
+        component: AdminHouseAddComponent
+      }
+    ]
   }
 ];
 
