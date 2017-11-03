@@ -2,7 +2,9 @@
   background-color: rgba(0, 255, 20, 0.48);
   float: left;
   width: 84.5%;
-  height: 90%;
+  height: 500px;
+  overflow-y: scroll;
+  flex: 1;
 }
 .header{
   height:20px;
@@ -21,7 +23,7 @@
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .content-wrapper{
-  height: 800px;
+  height: 980px;
   background-color: white;
 }
 .toobar{
@@ -37,4 +39,7 @@ form:first-child{
 }
 .mrb{
   margin-left: 30px;
+}
+.radio{
+
 }
