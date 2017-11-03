@@ -40,3 +40,12 @@ form:first-child{
 .textArea{
   margin-top: 20px;
 }
+.add{
+  background-color: #3F51B5;
+  color: white;
+}
+.cancel{
+  background-color: #9E9E9E;
+  color: white;
+  margin-left: 75px;
+}
