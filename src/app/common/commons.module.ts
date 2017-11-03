@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatTableModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatTableModule} from '@angular/material';
 import {MatRadioModule} from '@angular/material';
 import {MatSidenavModule, MatListModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
@@ -18,7 +18,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     MatToolbarModule,
     MatTableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   declarations: [],
   exports: [
@@ -32,7 +33,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     MatToolbarModule,
     MatTableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ]
 })
 export class CommonsModule { }

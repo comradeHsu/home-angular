@@ -14,6 +14,17 @@ export class AdminHouseAddComponent implements OnInit {
     Validators.required,
     Validators.pattern(PHONE_REGX)]);
 
+  secondFromControl = new FormControl('', [
+    Validators.required,
+    Validators.pattern(PHONE_REGX)]);
+
+  status = [
+    {viewValue: '已打电话', value: '0'},
+    {viewValue: '交易中', value: '1'},
+    {viewValue: '已付款', value: '2'},
+    {viewValue: '已完成', value: '3'}
+  ];
+
   constructor() { }
 
   ngOnInit() {

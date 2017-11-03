@@ -102,14 +102,22 @@
       <mat-form-field class="in">
         <span  matPrefix> +86&nbsp; </span>
         <input matInput name="title" class="mat-input-element" placeholder="业务员电话" required
-               [formControl]="phoneFormControl"/>
+               [formControl]="secondFromControl"/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
-        <mat-error *ngIf="phoneFormControl.hasError('pattern')">
+        <mat-error *ngIf="secondFromControl.hasError('pattern')">
           请输入合法的手机号
         </mat-error>
-        <mat-error *ngIf="phoneFormControl.hasError('required')">
+        <mat-error *ngIf="secondFromControl.hasError('required')">
           手机号不能为空
         </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="in">
+        <mat-select placeholder="交易状态">
+          <mat-option *ngFor="let xu of status" [value]="xu.value">
+            {{ xu.viewValue }}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
 
     </form>
