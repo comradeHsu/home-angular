@@ -49,3 +49,20 @@ form:first-child{
   color: white;
   margin-left: 75px;
 }
+.upload{
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding-left: 120px;
+  width: 59%;
+  margin-top: 24px;
+  height: 220px;
+  margin-left: 117px;
+}
+.upload-title{
+  text-align: center;
+  margin: 7px auto;
+  display: block;
+  padding-left: 0px;
+  margin-left: -130px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
