@@ -66,3 +66,17 @@ form:first-child{
   margin-left: -130px;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
+.source{
+  margin-left: -90px;
+}
+.upload-item{
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #c0ccda;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 148px;
+  height: 148px;
+  margin: 0 8px 8px 0;
+  display: inline-block;
+}
