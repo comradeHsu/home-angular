@@ -131,14 +131,16 @@
         <span class="upload-title">添加图片</span>
         <div class="source">
           <ul>
-            <li class="upload-item">
-              <img src="blob:http://www.dingshengfangchan.com/365d86cc-5639-4d55-a65d-30abe912a29e">
-            </li>
-            <li class="upload-item">
-              <label class="icon" for="file">
-                <mat-icon class="material-icons icons">add</mat-icon>
-              </label>
-              <input type="file" #file id="file" class="file">
+            <li class="upload-item"  *ngFor="let fil of files">
+              <div *ngIf="fil.status == false">
+                <label class="icon" for="file">
+                  <mat-icon class="material-icons icons">add</mat-icon>
+                </label>
+                <input type="file" #file id="file" class="file" accept="image/*" (change)="upload(file.value)">
+              </div>
+              <div *ngIf="fil.status == true">
+                <img src="blob:http://www.dingshengfangchan.com/365d86cc-5639-4d55-a65d-30abe912a29e">
+              </div>
             </li>
           </ul>
         </div>

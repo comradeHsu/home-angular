@@ -25,9 +25,19 @@ export class AdminHouseAddComponent implements OnInit {
     {viewValue: '已完成', value: '3'}
   ];
 
+  files = [
+    {value: '', status: false}
+  ];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  upload(file: any) {
+    console.log(file);
+    this.files.push({value: '', status: false});
+    console.log(this.files);
   }
 
 }
