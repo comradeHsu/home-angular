@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 const PHONE_REGX = /^1(3|4|5|7|8)\d{9}$/;
 

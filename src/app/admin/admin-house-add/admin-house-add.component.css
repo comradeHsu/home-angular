@@ -84,7 +84,12 @@ form:first-child{
   padding-left: 40px;
   padding-top: 40px;
   color: #8c939d;
+  display: block;
+  height: 105px;
 }
 .icons{
   font-size: 60px;
+}
+.file{
+  display: none;
 }
