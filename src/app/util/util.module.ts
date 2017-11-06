@@ -10,6 +10,9 @@ import {CommonsModule} from '../common/commons.module';
   ],
   declarations: [
     UploadComponent
+  ],
+  exports: [
+    UploadComponent
   ]
 })
 export class UtilModule { }

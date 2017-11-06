@@ -80,16 +80,3 @@ form:first-child{
   margin: 0 8px 8px 0;
   display: inline-block;
 }
-.icon{
-  padding-left: 40px;
-  padding-top: 40px;
-  color: #8c939d;
-  display: block;
-  height: 105px;
-}
-.icons{
-  font-size: 60px;
-}
-.file{
-  display: none;
-}
