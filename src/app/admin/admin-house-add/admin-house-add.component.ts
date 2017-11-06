@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import {File} from '../../model/file';
 const PHONE_REGX = /^1(3|4|5|7|8)\d{9}$/;
 
 @Component({
@@ -25,7 +26,7 @@ export class AdminHouseAddComponent implements OnInit {
     {viewValue: '已完成', value: '3'}
   ];
 
-  files = [
+  files: File[] = [
     {value: '', status: false}
   ];
 

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {File} from '../../model/file';
 
 @Component({
   selector: 'app-upload',
@@ -6,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./upload.component.css']
 })
 export class UploadComponent implements OnInit {
-  @Input() file: any;
+  @Input() file: File;
   constructor() { }
 
   ngOnInit() {
