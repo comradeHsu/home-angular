@@ -10,13 +10,15 @@ import { AdminRentAddComponent } from './admin-rent-add/admin-rent-add.component
 import { AdminHouseListComponent } from './admin-house-list/admin-house-list.component';
 import { AdminHouseAddComponent } from './admin-house-add/admin-house-add.component';
 import {FormsModule} from '@angular/forms';
+import {UtilModule} from '../util/util.module';
 
 @NgModule({
   imports: [
     CommonModule,
     CommonsModule,
     AdminRouteModule,
-    FormsModule
+    FormsModule,
+    UtilModule
   ],
   declarations: [
     AdminMenuComponent,

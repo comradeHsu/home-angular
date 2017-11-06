@@ -136,7 +136,7 @@
                 <label class="icon" for="file">
                   <mat-icon class="material-icons icons">add</mat-icon>
                 </label>
-                <input type="file" #file id="file" class="file" accept="image/*" (change)="upload(file.value)">
+                <input type="file" id="file" class="file" accept="image/*" (change)="upload($event)">
               </div>
               <div *ngIf="fil.status == true">
                 <img src="blob:http://www.dingshengfangchan.com/365d86cc-5639-4d55-a65d-30abe912a29e">

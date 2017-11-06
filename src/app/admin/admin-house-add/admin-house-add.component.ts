@@ -29,15 +29,16 @@ export class AdminHouseAddComponent implements OnInit {
     {value: '', status: false}
   ];
 
-  constructor() { }
+  constructor(private render: Renderer2) { }
 
   ngOnInit() {
   }
 
-  upload(file: any) {
-    console.log(file);
+  upload(event: Event) {
+    const target = (<Element>event.target) || event.srcElement;
+    let file = target;
     this.files.push({value: '', status: false});
-    console.log(this.files);
+    console.log(file);
   }
 
 }
