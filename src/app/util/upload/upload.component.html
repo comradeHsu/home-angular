@@ -1,3 +1,9 @@
-<p>
-  upload works!
-</p>
+<div *ngIf="file.status == false">
+  <label class="icon" for="file">
+    <mat-icon class="material-icons icons">add</mat-icon>
+  </label>
+  <input type="file" id="file" #file class="file" accept="image/*" (change)="upload(file)">
+</div>
+<div *ngIf="file.status == true">
+  <img src="blob:http://www.dingshengfangchan.com/365d86cc-5639-4d55-a65d-30abe912a29e">
+</div>

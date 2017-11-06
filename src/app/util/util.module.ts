@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UploadComponent } from './upload/upload.component';
+import {CommonsModule} from '../common/commons.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    CommonsModule
   ],
-  declarations: [UploadComponent]
+  declarations: [
+    UploadComponent
+  ]
 })
 export class UtilModule { }
