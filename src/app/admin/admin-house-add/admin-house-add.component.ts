@@ -35,12 +35,6 @@ export class AdminHouseAddComponent implements OnInit {
   ngOnInit() {
   }
 
-  upload(event: Event) {
-    const target = (<Element>event.target) || event.srcElement;
-    let file = target;
-    this.files.push({value: '', status: false});
-    console.log(file);
-  }
 
 }
 

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {File} from '../../model/file';
 
 @Component({
@@ -8,9 +8,14 @@ import {File} from '../../model/file';
 })
 export class UploadComponent implements OnInit {
   @Input() file: File;
+  @Output() fileHander = new EventEmitter<File>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  upload(value: string) {
+    console.log(value);
   }
 
 }
