@@ -35,6 +35,9 @@ export class AdminHouseAddComponent implements OnInit {
   ngOnInit() {
   }
 
+  uploadSuccess(file: File) {
+    this.files.push(file);
+  }
 
 }
 

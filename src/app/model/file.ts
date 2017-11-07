@@ -3,5 +3,5 @@
  */
 export class File {
   value: string;
-  status: boolean;
+  status = false;
 }

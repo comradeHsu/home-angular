@@ -132,7 +132,7 @@
         <div class="source">
           <ul>
             <li class="upload-item"  *ngFor="let fil of files">
-              <app-upload [file]="fil"></app-upload>
+              <app-upload [file]="fil" (fileUpload)="uploadSuccess($event)"></app-upload>
             </li>
           </ul>
         </div>

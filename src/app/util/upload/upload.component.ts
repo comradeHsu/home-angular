@@ -8,7 +8,7 @@ import {File} from '../../model/file';
 })
 export class UploadComponent implements OnInit {
   @Input() file: File;
-  @Output() fileHander = new EventEmitter<File>();
+  @Output() fileUpload = new EventEmitter<File>();
   constructor() { }
 
   ngOnInit() {
@@ -16,6 +16,9 @@ export class UploadComponent implements OnInit {
 
   upload(value: string) {
     console.log(value);
+    let file = new File();
+    file.value = value;
+    this.fileUpload.emit(file);
   }
 
 }
