@@ -11,6 +11,7 @@ import { AdminHouseListComponent } from './admin-house-list/admin-house-list.com
 import { AdminHouseAddComponent } from './admin-house-add/admin-house-add.component';
 import {FormsModule} from '@angular/forms';
 import {UtilModule} from '../util/util.module';
+import {ShareService} from '../service/share.service';
 
 @NgModule({
   imports: [
@@ -28,6 +29,9 @@ import {UtilModule} from '../util/util.module';
     AdminHouseAddComponent,
     AdminRentAddComponent,
     AdminRentListComponent
-  ]
+  ],
+  providers: [
+    {provide: 'share', useClass: ShareService}
+  ],
 })
 export class AdminModule { }
