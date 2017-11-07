@@ -72,7 +72,7 @@ form:first-child{
 .upload-item{
   overflow: hidden;
   background-color: #fff;
-  border: 1px solid #c0ccda;
+  border: 1px dashed #c0ccda;
   border-radius: 6px;
   box-sizing: border-box;
   width: 148px;

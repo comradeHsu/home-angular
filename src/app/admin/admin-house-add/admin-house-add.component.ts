@@ -41,5 +41,9 @@ export class AdminHouseAddComponent implements OnInit {
     this.files.push(new File());
   }
 
+  // mouseOver(item: ElementRef) {
+  //   item.nativeElement.addAttribute('style', 'border: 1px dashed #8824DA');
+  // }
+
 }
 

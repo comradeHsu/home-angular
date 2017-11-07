@@ -131,7 +131,7 @@
         <span class="upload-title">添加图片</span>
         <div class="source">
           <ul>
-            <li class="upload-item"  *ngFor="let fil of files">
+            <li class="upload-item" #item *ngFor="let fil of files" (mouseover)="mouseOver(item)">
               <app-upload [file]="fil" (fileUpload)="uploadSuccess($event)"></app-upload>
             </li>
           </ul>
