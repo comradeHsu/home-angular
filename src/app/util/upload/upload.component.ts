@@ -16,10 +16,9 @@ export class UploadComponent implements OnInit {
 
   upload(value: string) {
     console.log(value);
-    let file = new File();
-    file.value = value;
-    file.status = true;
-    this.fileUpload.emit(file);
+    this.file.value = value;
+    this.file.status = true;
+    this.fileUpload.emit(this.file);
   }
 
 }
