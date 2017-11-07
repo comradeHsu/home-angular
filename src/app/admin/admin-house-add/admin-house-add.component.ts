@@ -27,7 +27,7 @@ export class AdminHouseAddComponent implements OnInit {
   ];
 
   files: File[] = [
-    {value: '', status: false}
+    new File()
   ];
 
   constructor(private render: Renderer2) { }
@@ -36,7 +36,9 @@ export class AdminHouseAddComponent implements OnInit {
   }
 
   uploadSuccess(file: File) {
+    let oldFile = this.files.pop();
     this.files.push(file);
+    this.files.push(new File());
   }
 
 }
