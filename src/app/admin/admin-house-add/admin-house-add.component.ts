@@ -33,6 +33,10 @@ export class AdminHouseAddComponent implements OnInit {
   constructor(private render: Renderer2) { }
 
   ngOnInit() {
+    const eles = document.getElementsByClassName('upload-item');
+    for(let ele of eles) {
+
+    }
   }
 
   uploadSuccess(file: File) {
