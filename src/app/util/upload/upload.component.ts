@@ -1,5 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {File} from '../../model/file';
+import {ShareService} from '../../service/share.service';
+import {Http, RequestOptions} from '@angular/http';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-upload',
@@ -9,16 +12,32 @@ import {File} from '../../model/file';
 export class UploadComponent implements OnInit {
   @Input() file: File;
   @Output() fileUpload = new EventEmitter<File>();
-  constructor() { }
+  @Input() domain: string;
+  @Input() token: string;
+  constructor(private http: Http) { }
 
   ngOnInit() {
   }
 
-  upload(value: string) {
+  upload(value: FileList) {
     console.log(value);
-    this.file.value = value;
+    let thisFile = value[0];
+    this.file.value = thisFile.name;
     this.file.status = true;
     this.fileUpload.emit(this.file);
+    let formData: FormData = new FormData();
+    formData.append('file', thisFile, thisFile.name);
+    formData.append('token', this.token);
+    let headers = new Headers({
+      'Accept': 'application/json'
+    });
+    let options = new RequestOptions(headers);
+    this.http.post('http://up-z1.qiniu.com', formData, options)
+      .map(res => res.json())
+      .subscribe(
+        data => console.log('success' + data),
+        error => console.log(error)
+      );
   }
 
 }

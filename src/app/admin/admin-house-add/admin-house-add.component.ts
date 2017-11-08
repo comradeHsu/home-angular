@@ -1,6 +1,7 @@
-import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {File} from '../../model/file';
+import {ShareService} from '../../service/share.service';
 const PHONE_REGX = /^1(3|4|5|7|8)\d{9}$/;
 
 @Component({
@@ -29,14 +30,28 @@ export class AdminHouseAddComponent implements OnInit {
   files: File[] = [
     new File()
   ];
-
-  constructor(private render: Renderer2) { }
+  private domain: string;
+  private token: string;
+  constructor(private render: Renderer2,
+              @Inject('share')private share) {
+    // this.share.getDomin().subscribe(res => this.domain = res);
+    // this.share.getQiniuToken().subscribe(res => this.token = res);
+    this.domain = 'http://image.dingshengfangchan.com';
+    this.token = 'ZUT5S2y2msEEmO8t7F9Qakn9PkOpfJshC4VQQKJo:Ks2ot2DRb3nzA6PWZL5EReHnUVo=' +
+      ':eyJzY29wZSI6ImRpbmdzaGVuZyIsImRlYWRsaW5lIjoxNTEwMTU3NjA1fQ==';
+  }
 
   ngOnInit() {
-    const eles = document.getElementsByClassName('upload-item');
-    for(let ele of eles) {
-
-    }
+    // const eles = document.getElementsByClassName('upload-item');
+    // console.log(eles);
+    // for ( let i = 0; i < eles.length; i++) {
+    //   eles.item(i).addEventListener('mouseover', data => {
+    //     eles.item(i).setAttribute('style', 'border: 1px dashed #8824DA');
+    //   });
+    //   eles.item(i).addEventListener('mouseout', data => {
+    //     eles.item(i).setAttribute('style', 'border: 1px dashed #c0ccda');
+    //   });
+    // }
   }
 
   uploadSuccess(file: File) {
