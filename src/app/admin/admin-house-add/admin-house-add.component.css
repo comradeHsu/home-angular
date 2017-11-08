@@ -55,7 +55,7 @@ form:first-child{
   padding-left: 120px;
   width: 59%;
   margin-top: 24px;
-  height: 220px;
+  /*height: 220px;*/ /*父元素不设置高度的话 当子元素float溢出时会自动适应*/
   margin-left: 117px;
 }
 .upload-title{
