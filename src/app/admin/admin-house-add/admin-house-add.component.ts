@@ -34,11 +34,11 @@ export class AdminHouseAddComponent implements OnInit {
   private token: string;
   constructor(private render: Renderer2,
               @Inject('share')private share) {
-    // this.share.getDomin().subscribe(res => this.domain = res);
-    // this.share.getQiniuToken().subscribe(res => this.token = res);
-    this.domain = 'http://image.dingshengfangchan.com';
-    this.token = 'ZUT5S2y2msEEmO8t7F9Qakn9PkOpfJshC4VQQKJo:Ks2ot2DRb3nzA6PWZL5EReHnUVo=' +
-      ':eyJzY29wZSI6ImRpbmdzaGVuZyIsImRlYWRsaW5lIjoxNTEwMTU3NjA1fQ==';
+    this.share.getDomin().subscribe(res => this.domain = res);
+    this.share.getQiniuToken().subscribe(res => this.token = res);
+    // this.domain = 'http://image.dingshengfangchan.com';
+    // this.token = 'ZUT5S2y2msEEmO8t7F9Qakn9PkOpfJshC4VQQKJo:Ks2ot2DRb3nzA6PWZL5EReHnUVo=' +
+    //   ':eyJzY29wZSI6ImRpbmdzaGVuZyIsImRlYWRsaW5lIjoxNTEwMTU3NjA1fQ==';
   }
 
   ngOnInit() {
