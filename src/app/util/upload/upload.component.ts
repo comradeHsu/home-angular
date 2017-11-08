@@ -24,7 +24,7 @@ export class UploadComponent implements OnInit {
     let thisFile = value[0];
     this.file.value = thisFile.name;
     this.file.status = true;
-    this.fileUpload.emit(this.file);
+
     let formData: FormData = new FormData();
     formData.append('file', thisFile, thisFile.name);
     formData.append('token', this.token);
@@ -35,9 +35,10 @@ export class UploadComponent implements OnInit {
     this.http.post('http://up-z1.qiniu.com', formData, options)
       .map(res => res.json())
       .subscribe(
-        data => console.log('success' + data),
+        data => this.file.value = `${this.domain}/${data.key}`,
         error => console.log(error)
       );
+    this.fileUpload.emit(this.file);
   }
 
 }

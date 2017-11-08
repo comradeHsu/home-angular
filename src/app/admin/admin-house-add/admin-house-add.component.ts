@@ -58,6 +58,7 @@ export class AdminHouseAddComponent implements OnInit {
     let oldFile = this.files.pop();
     this.files.push(file);
     this.files.push(new File());
+    console.log(file);
   }
 
   // mouseOver(item: ElementRef) {
