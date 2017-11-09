@@ -6,7 +6,7 @@
 </div>
 <div *ngIf="file.status == true" class="back">
   <!--<img [src]="file.value">-->
-  <span class="upload-back">
+  <span class="upload-back" [ngStyle]="{'opacity': opacity}" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
     <span></span>
     <span></span>
   </span>

@@ -16,6 +16,8 @@ export class UploadComponent implements OnInit {
   @Input() token: string;
   constructor(private http: Http) { }
 
+  private opacity = 0;
+
   ngOnInit() {
   }
 
@@ -39,6 +41,14 @@ export class UploadComponent implements OnInit {
         error => console.log(error)
       );
     this.fileUpload.emit(this.file);
+  }
+
+  mouseOver() {
+    this.opacity = 1;
+  }
+
+  mouseOut() {
+    this.opacity = 0;
   }
 
 }
