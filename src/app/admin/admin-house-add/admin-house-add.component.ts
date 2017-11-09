@@ -81,8 +81,17 @@ export class AdminHouseAddComponent implements OnInit {
 
 @Component({
   selector: 'app-upload-dialog',
-  template: '<div><img [src]="src" alt="图片已失效"></div>'
-  // styleUrls: ['./upload-dialog.component.css']
+  template: '<div class="dialog"><img [src]="src" alt="图片已失效" class="image"></div>',
+  styles: [`.dialog{
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.image{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}`]
 })
 export class UploadDialogComponent {
   src: string;

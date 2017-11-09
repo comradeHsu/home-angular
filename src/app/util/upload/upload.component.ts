@@ -11,6 +11,7 @@ import {Http, RequestOptions} from '@angular/http';
 export class UploadComponent implements OnInit {
   @Input() file: File;
   @Output() fileUpload = new EventEmitter<File>();
+  @Output() biger = new EventEmitter<boolean>();
   @Input() domain: string;
   @Input() token: string;
   constructor(private http: Http) { }
@@ -48,6 +49,10 @@ export class UploadComponent implements OnInit {
 
   mouseOut() {
     this.opacity = 0;
+  }
+
+  visibility() {
+    this.biger.emit(true);
   }
 
 }

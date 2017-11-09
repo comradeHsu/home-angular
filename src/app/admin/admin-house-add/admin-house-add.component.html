@@ -133,7 +133,7 @@
           <ul>
             <li class="upload-item" *ngFor="let fil of files">
               <app-upload [file]="fil" (fileUpload)="uploadSuccess($event)"
-                        [token]="token" [domain]="domain" (click)="openDialog()">
+                        [token]="token" [domain]="domain" (biger)="openDialog()">
               </app-upload>
             </li>
           </ul>

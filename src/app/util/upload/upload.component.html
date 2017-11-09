@@ -7,7 +7,7 @@
 <div *ngIf="file.status == true" class="back">
   <img [src]="file.value" alt="图片已失效">
   <span class="upload-back" [ngStyle]="{'opacity': opacity}" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
-    <a>
+    <a (click)="visibility()">
       <mat-icon class="material-icons">visibility</mat-icon>
     </a>
     <a>
