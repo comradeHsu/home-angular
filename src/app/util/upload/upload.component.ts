@@ -1,8 +1,7 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
 import {File} from '../../model/file';
 import {ShareService} from '../../service/share.service';
 import {Http, RequestOptions} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-upload',

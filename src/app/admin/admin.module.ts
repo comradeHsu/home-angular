@@ -8,7 +8,7 @@ import { AdminUserListComponent } from './admin-user-list/admin-user-list.compon
 import { AdminRentListComponent } from './admin-rent-list/admin-rent-list.component';
 import { AdminRentAddComponent } from './admin-rent-add/admin-rent-add.component';
 import { AdminHouseListComponent } from './admin-house-list/admin-house-list.component';
-import { AdminHouseAddComponent } from './admin-house-add/admin-house-add.component';
+import {AdminHouseAddComponent, UploadDialogComponent} from './admin-house-add/admin-house-add.component';
 import {FormsModule} from '@angular/forms';
 import {UtilModule} from '../util/util.module';
 import {ShareService} from '../service/share.service';
@@ -28,8 +28,10 @@ import {ShareService} from '../service/share.service';
     AdminHouseListComponent,
     AdminHouseAddComponent,
     AdminRentAddComponent,
-    AdminRentListComponent
+    AdminRentListComponent,
+    UploadDialogComponent
   ],
+  entryComponents: [UploadDialogComponent],
   providers: [
     {provide: 'share', useClass: ShareService}
   ],

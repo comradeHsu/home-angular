@@ -2,6 +2,7 @@ import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angu
 import {FormControl, Validators} from '@angular/forms';
 import {File} from '../../model/file';
 import {ShareService} from '../../service/share.service';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 const PHONE_REGX = /^1(3|4|5|7|8)\d{9}$/;
 
 @Component({
@@ -33,7 +34,8 @@ export class AdminHouseAddComponent implements OnInit {
   private domain: string;
   private token: string;
   constructor(private render: Renderer2,
-              @Inject('share')private share) {
+              @Inject('share')private share,
+              public dialog: MatDialog) {
     this.share.getDomin().subscribe(res => this.domain = res);
     this.share.getQiniuToken().subscribe(res => this.token = res);
     // this.domain = 'http://image.dingshengfangchan.com';
@@ -64,6 +66,35 @@ export class AdminHouseAddComponent implements OnInit {
   // mouseOver(item: ElementRef) {
   //   item.nativeElement.addAttribute('style', 'border: 1px dashed #8824DA');
   // }
+  openDialog(): void {
+    let dialogRef = this.dialog.open(UploadDialogComponent, {
+      width: '250px',
+      data: { src: this.files[this.files.length - 2 ].value }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+}
+
+@Component({
+  selector: 'app-upload-dialog',
+  template: '<div><img [src]="src"></div>'
+  // styleUrls: ['./upload-dialog.component.css']
+})
+export class UploadDialogComponent {
+  src: string;
+  constructor(
+    public dialogRef: MatDialogRef<UploadDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {
+    this.src = data.src;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 
 }
 
