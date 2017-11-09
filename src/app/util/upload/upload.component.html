@@ -4,6 +4,10 @@
   </label>
   <input type="file" id="filed" class="upload-file" accept="image/*" (change)="upload($event.target.files)">
 </div>
-<div *ngIf="file.status == true">
-  <img [src]="file.value">
+<div *ngIf="file.status == true" class="back">
+  <!--<img [src]="file.value">-->
+  <span class="upload-back">
+    <span></span>
+    <span></span>
+  </span>
 </div>
