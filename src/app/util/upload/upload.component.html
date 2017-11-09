@@ -5,7 +5,7 @@
   <input type="file" id="filed" class="upload-file" accept="image/*" (change)="upload($event.target.files)">
 </div>
 <div *ngIf="file.status == true" class="back">
-  <img [src]="file.value">
+  <img [src]="file.value" alt="图片已失效">
   <span class="upload-back" [ngStyle]="{'opacity': opacity}" (mouseover)="mouseOver()" (mouseout)="mouseOut()">
     <a>
       <mat-icon class="material-icons">visibility</mat-icon>
