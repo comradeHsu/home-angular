@@ -12,6 +12,7 @@ export class UploadComponent implements OnInit {
   @Input() file: File;
   @Output() fileUpload = new EventEmitter<File>();
   @Output() biger = new EventEmitter<boolean>();
+  @Output() deleted = new EventEmitter<File>();
   @Input() domain: string;
   @Input() token: string;
   constructor(private http: Http) { }
@@ -53,6 +54,10 @@ export class UploadComponent implements OnInit {
 
   visibility() {
     this.biger.emit(true);
+  }
+
+  deleteds() {
+    this.deleted.emit(this.file);
   }
 
 }

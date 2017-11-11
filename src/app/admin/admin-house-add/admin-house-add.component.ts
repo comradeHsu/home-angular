@@ -63,6 +63,11 @@ export class AdminHouseAddComponent implements OnInit {
     console.log(file);
   }
 
+  deleteFile(file: File) {
+    let index = this.files.indexOf(file);
+    this.files.splice(index, 1);
+  }
+
   // mouseOver(item: ElementRef) {
   //   item.nativeElement.addAttribute('style', 'border: 1px dashed #8824DA');
   // }
