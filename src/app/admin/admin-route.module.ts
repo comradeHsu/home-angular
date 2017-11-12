@@ -28,6 +28,10 @@ const routes: Routes = [
       {
         path: 'addHouse',
         component: AdminHouseAddComponent
+      },
+      {
+        path: 'addRent',
+        component: AdminRentAddComponent
       }
     ]
   }

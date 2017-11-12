@@ -1,0 +1,82 @@
+#docker{
+  background-color: rgba(0, 255, 20, 0.48);
+  float: left;
+  width: 84.5%;
+  height: 600px;
+  overflow-y: scroll;
+  flex: 1;
+}
+.header{
+  height:20px;
+  padding-top: 15px;
+}
+.desc{
+  width:200px;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 20px;
+  line-height: 20px;
+}
+.location{
+  float: right;
+  padding-right: 15px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.content-wrapper{
+  height: 1000px;
+  background-color: white;
+}
+.in{
+  padding-left: 120px;
+  width: 70%;
+  margin-top: -10px;
+}
+form:first-child{
+  padding-top: 10px;
+}
+.mrb{
+  margin-left: 30px;
+}
+.textArea{
+  margin-top: 20px;
+}
+.add{
+  background-color: #3F51B5;
+  color: white;
+}
+.cancel{
+  background-color: #9E9E9E;
+  color: white;
+  margin-left: 75px;
+}
+.upload{
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding-left: 120px;
+  width: 59%;
+  margin-top: 24px;
+  /*height: 220px;*/ /*父元素不设置高度的话 当子元素float溢出时会自动适应*/
+  margin-left: 117px;
+}
+.upload-title{
+  text-align: center;
+  margin: 7px auto;
+  display: block;
+  padding-left: 0px;
+  margin-left: -130px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.source{
+  margin-left: -90px;
+}
+.upload-item{
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px dashed #c0ccda;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 148px;
+  height: 148px;
+  margin: 0 8px 8px 0;
+  display: inline-block;
+}

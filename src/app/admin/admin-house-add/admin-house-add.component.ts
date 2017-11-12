@@ -1,9 +1,8 @@
 import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {File} from '../../model/file';
-import {ShareService} from '../../service/share.service';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
-const PHONE_REGX = /^1(3|4|5|7|8)\d{9}$/;
+import {Constant} from '../../common/constant';
 
 @Component({
   selector: 'app-admin-house-add',
@@ -15,11 +14,11 @@ export class AdminHouseAddComponent implements OnInit {
   // formControl指令需要FormsModule, ReactiveFormsModule 的支持
   phoneFormControl = new FormControl('', [
     Validators.required,
-    Validators.pattern(PHONE_REGX)]);
+    Validators.pattern(Constant.PHONE_REGX)]);
 
   secondFromControl = new FormControl('', [
     Validators.required,
-    Validators.pattern(PHONE_REGX)]);
+    Validators.pattern(Constant.PHONE_REGX)]);
 
   status = [
     {viewValue: '已打电话', value: '0'},
