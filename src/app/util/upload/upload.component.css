@@ -36,3 +36,6 @@
   height: 100%;
   vertical-align: middle;
 }
+mat-spinner{
+  padding-left: 42px;
+}

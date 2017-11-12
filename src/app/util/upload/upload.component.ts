@@ -2,6 +2,7 @@ import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/c
 import {File} from '../../model/file';
 import {ShareService} from '../../service/share.service';
 import {Http, RequestOptions} from '@angular/http';
+import {TimeInterval} from 'rxjs/Rx';
 
 @Component({
   selector: 'app-upload',
@@ -17,6 +18,8 @@ export class UploadComponent implements OnInit {
   @Input() token: string;
   constructor(private http: Http) { }
 
+  private init = false;
+
   private opacity = 0;
 
   ngOnInit() {
@@ -24,6 +27,7 @@ export class UploadComponent implements OnInit {
 
   upload(value: FileList) {
     console.log(value);
+    this.init = true;
     let thisFile = value[0];
     this.file.value = thisFile.name;
     this.file.status = true;
@@ -42,6 +46,7 @@ export class UploadComponent implements OnInit {
         error => console.log(error)
       );
     this.fileUpload.emit(this.file);
+    this.init = false;
   }
 
   mouseOver() {
