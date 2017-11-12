@@ -3,9 +3,23 @@
   <div class="title-left">
     <span class="banner">房产后台管理</span>
   </div>
-  <div class="headImg">
+  <div class="headImg" [matMenuTriggerFor]="menu">
     <img src="/assets/back.jpg">
   </div>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>message</mat-icon>
+      <span>我的消息</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>message</mat-icon>
+      <span>设置</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>message</mat-icon>
+      <span>退出登录</span>
+    </button>
+  </mat-menu>
 </div>
 <div class="sidnav">
   <ul>
