@@ -1,5 +1,4 @@
 #docker{
-  background-color: rgba(0, 255, 20, 0.48);
   float: left;
   width: 84.5%;
   height: 600px;
@@ -50,7 +49,7 @@ form:first-child{
   margin-left: 75px;
 }
 .upload{
-  border: 1px solid #eaeefb;
+  border: 2px solid rgba(20, 60, 191, 0.52);
   border-radius: 4px;
   padding-left: 120px;
   width: 59%;
@@ -72,7 +71,7 @@ form:first-child{
 .upload-item{
   overflow: hidden;
   background-color: #fff;
-  border: 1px dashed #c0ccda;
+  border: 1px dashed #0a3e7b;
   border-radius: 6px;
   box-sizing: border-box;
   width: 148px;
