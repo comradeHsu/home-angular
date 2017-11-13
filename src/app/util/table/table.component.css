@@ -1,7 +1,8 @@
-mat-card{
+div{
   float:left;
+  width: 150px;
+  height: 30px;
 }
 .selector{
   float:left;
-  padding-top: 22px;
 }
