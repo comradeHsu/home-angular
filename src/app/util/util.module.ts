@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UploadComponent } from './upload/upload.component';
 import {CommonsModule} from '../common/commons.module';
 import {ShareService} from '../service/share.service';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import {ShareService} from '../service/share.service';
     CommonsModule
   ],
   declarations: [
-    UploadComponent
+    UploadComponent,
+    TableComponent
   ],
   exports: [
     UploadComponent
