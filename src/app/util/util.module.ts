@@ -15,7 +15,8 @@ import { TableComponent } from './table/table.component';
     TableComponent
   ],
   exports: [
-    UploadComponent
+    UploadComponent,
+    TableComponent
   ],
   providers: [
     {provide: 'share', useClass: ShareService}
