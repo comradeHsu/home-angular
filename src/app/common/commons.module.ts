@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatProgressSpinnerModule,
   MatSelectModule,
-  MatTableModule
+  MatTableModule, MatTooltipModule
 } from '@angular/material';
 import {MatRadioModule} from '@angular/material';
 import {MatSidenavModule, MatListModule} from '@angular/material';
@@ -26,7 +26,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatSelectModule,
     MatDialogModule,
     MatMenuModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule
   ],
   declarations: [],
   exports: [
@@ -44,7 +45,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatSelectModule,
     MatDialogModule,
     MatMenuModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule
   ]
 })
 export class CommonsModule { }
