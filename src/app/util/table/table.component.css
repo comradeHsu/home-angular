@@ -1,6 +1,7 @@
 mat-card{
   float:left;
 }
-mat-checkbox{
+.selector{
   float:left;
+  padding-top: 22px;
 }
