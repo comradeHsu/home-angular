@@ -2,7 +2,13 @@ div{
   float:left;
   width: 150px;
   height: 30px;
+  text-align: center;
 }
 .selector{
   float:left;
+  width: 40px;
+  padding-left: 20px;
+}
+.id{
+  width: 45px;
 }
