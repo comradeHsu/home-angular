@@ -1,6 +1,6 @@
 <table matSort (matSortChange)="sortData($event)">
   <thead>
-    <tr>
+    <tr class="head">
       <td>
         <mat-checkbox labelPosition="after" class="selector">
         </mat-checkbox>
@@ -15,6 +15,19 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>
+        <mat-checkbox labelPosition="after" class="selector">
+        </mat-checkbox>
+        <div class="id">ID</div>
+        <div class="title">标题</div>
+        <div class="home">房屋面积</div>
+        <div class="phone">联系电话</div>
+        <div class="status">交易状态</div>
+        <div class="address">地址</div>
+        <div class="operation">操作</div>
+      </td>
+    </tr>
     <tr>
       <td>
         <mat-checkbox labelPosition="after" class="selector">

@@ -1,3 +1,11 @@
+table{
+  display: table;
+  font-size: 15px;
+  border: 1px solid;
+  color: #1f2d3d;
+  border-color: rgba(0, 0, 255, 0.29);
+  /*background-color: #0a3e7b  !important;*/
+}
 div{
   float:left;
   width: 150px;
@@ -9,6 +17,15 @@ div{
   width: 40px;
   padding-left: 20px;
 }
+thead{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.head{
+  border: 1px;
+  background-color: rgba(96, 125, 139, 0.4);
+}
 .id{
   width: 45px;
 }
@@ -17,4 +34,7 @@ div{
 }
 .address{
   width: 250px;
+}
+tbody td{
+  background-color: rgba(21, 123, 154, 0.09);
 }
