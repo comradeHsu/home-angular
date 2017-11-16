@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import {
-  MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatProgressSpinnerModule,
+  MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatMenuModule, MatPaginatorModule,
+  MatProgressSpinnerModule,
   MatSelectModule, MatSortModule,
   MatTableModule, MatTooltipModule
 } from '@angular/material';
@@ -29,7 +30,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatProgressSpinnerModule,
     MatTooltipModule,
     MatCardModule,
-    MatSortModule
+    MatSortModule,
+    MatPaginatorModule
   ],
   declarations: [],
   exports: [
@@ -50,7 +52,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatProgressSpinnerModule,
     MatTooltipModule,
     MatCardModule,
-    MatSortModule
+    MatSortModule,
+    MatPaginatorModule
   ]
 })
 export class CommonsModule { }
