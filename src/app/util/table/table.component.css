@@ -4,7 +4,7 @@ table{
   border: 1px solid;
   color: #1f2d3d;
   border-color: rgba(0, 0, 255, 0.29);
-  /*background-color: #0a3e7b  !important;*/
+  background-color: rgba(10, 62, 123, 0.38);
 }
 div{
   float:left;
@@ -24,10 +24,13 @@ thead{
 }
 .head{
   border: 1px;
-  background-color: rgba(96, 125, 139, 0.4);
+  background-color: rgba(154, 197, 218, 0.45);
 }
 .id{
-  width: 45px;
+  width: 75px;
+}
+.phone{
+  width: 174px;
 }
 .home{
   width: 100px;
@@ -35,6 +38,6 @@ thead{
 .address{
   width: 250px;
 }
-tbody td{
-  background-color: rgba(21, 123, 154, 0.09);
+ td{
+ background-color: rgba(243, 243, 243, 0.98)
 }
