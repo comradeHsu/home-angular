@@ -39,5 +39,6 @@ thead{
   width: 250px;
 }
  td{
- background-color: rgba(243, 243, 243, 0.98)
+   background-color: rgba(243, 243, 243, 0.98);
+   line-height: 30px;
 }
