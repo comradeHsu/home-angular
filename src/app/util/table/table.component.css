@@ -10,7 +10,7 @@ table{
 div{
   float:left;
   width: 11.5%;
-  height: 30px;
+  height: 40px;
   text-align: center;
 }
 .selector{
@@ -41,5 +41,21 @@ thead{
 }
  td{
    background-color: rgba(243, 243, 243, 0.98);
-   line-height: 30px;
+   line-height: 40px;
+}
+ tbody td:hover{
+   background-color: rgba(73, 177, 255, 0.57);
+ }
+.mrb{
+  border-radius: 4px;
+  white-space: nowrap;
+  background: #fff;
+  color: #1f2d3d;
+  box-sizing: border-box;
+  width: 38%;
+  height: 66%;
+ }
+.warn{
+  background-color: rgba(214, 37, 37, 0.78);
+  color: white;
 }
