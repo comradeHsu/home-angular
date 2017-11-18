@@ -5,17 +5,18 @@ table{
   color: #1f2d3d;
   border-color: rgba(0, 0, 255, 0.29);
   background-color: rgba(10, 62, 123, 0.38);
+  width: 100%;
 }
 div{
   float:left;
-  width: 150px;
+  width: 11.5%;
   height: 30px;
   text-align: center;
 }
 .selector{
   float:left;
-  width: 40px;
-  padding-left: 20px;
+  width: 3.6%;
+  padding-left: 1.8%;
 }
 thead{
   display: table-header-group;
@@ -27,16 +28,16 @@ thead{
   background-color: rgba(154, 197, 218, 0.45);
 }
 .id{
-  width: 75px;
+  width: 6.8%;
 }
 .phone{
-  width: 174px;
+  width: 16%;
 }
 .home{
-  width: 100px;
+  width: 11%;
 }
 .address{
-  width: 250px;
+  width: 22.8%;
 }
  td{
    background-color: rgba(243, 243, 243, 0.98);
