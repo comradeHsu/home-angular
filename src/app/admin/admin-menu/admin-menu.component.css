@@ -21,6 +21,7 @@
   border-right-style: solid;
   background-color: #20a0ff;
   margin-top: -6px;
+  background: linear-gradient(to right, rgba(0, 20, 255, 0.58) , rgba(0, 173, 255, 0.46));
 }
 .title-left{
   height: 60px;

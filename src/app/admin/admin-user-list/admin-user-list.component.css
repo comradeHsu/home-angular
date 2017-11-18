@@ -1,5 +1,5 @@
 #docker{
-  background-color: rgba(0, 255, 20, 0.48);
+  /*background-color: rgba(0, 255, 20, 0.48);*/
   float: left;
   width: 84.5%;
   height: 90%;
@@ -7,7 +7,25 @@
 .header{
   height:20px;
   padding-top: 15px;
+  background: linear-gradient(to right, rgba(0, 20, 255, 0) , rgb(0, 67, 255));
+  -webkit-animation: myfirst 5s;
+  -webkit-animation-iteration-count:infinite;
 }
+@-webkit-keyframes myfirst /* Safari 与 Chrome */
+{
+  0%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0) ,rgba(0, 173, 255, 0.46));}
+  90%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.53),rgba(0, 173, 255, 0.46));}
+  80%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.48) , rgba(0, 173, 255, 0.46));}
+  70%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.43), rgba(0, 173, 255, 0.46));}
+  60%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.38), rgba(0, 173, 255, 0.46));}
+  50%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.33), rgba(0, 173, 255, 0.46));}
+  40%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.28), rgba(0, 173, 255, 0.46));}
+  30%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.23), rgba(0, 173, 255, 0.46));}
+  20%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.18), rgba(0, 173, 255, 0.46));}
+  10%   {    background: linear-gradient(to right, rgba(0, 20, 255, 0.1), rgba(0, 173, 255, 0.46));}
+  100% {background: linear-gradient(to right, rgba(0, 20, 255, 0.58), rgba(0, 173, 255, 0.46));}
+}
+
 .desc{
   width:200px;
   font-weight: bold;
@@ -25,7 +43,7 @@
   background-color: white;
 }
 .toobar{
-  background-color: rgba(174, 213, 129, 0.38);
+  /*background-color: rgba(174, 213, 129, 0.38);*/
 }
 .in{
   padding-left: 20px;
