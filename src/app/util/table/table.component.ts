@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {RentHouse} from '../../model/rentHouse';
 
 @Component({
   selector: 'app-table',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-
+  @Input() houses: RentHouse[];
   constructor() { }
 
   ngOnInit() {
