@@ -15,32 +15,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr *ngFor="let house of houses">
       <td>
         <mat-checkbox labelPosition="after" class="selector" checked="true">
         </mat-checkbox>
         <div class="id">ID</div>
-        <div class="title">标题</div>
-        <div class="home">房屋面积</div>
-        <div class="phone">联系电话</div>
-        <div class="status">交易状态</div>
-        <div class="address">地址</div>
-        <div class="operation">
-          <button class="mrb" type="button"><span>编辑</span></button>
-          <button class="mrb warn" type="button"><span>删除</span></button>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <mat-checkbox labelPosition="after" class="selector">
-        </mat-checkbox>
-        <div class="id">ID</div>
-        <div class="title">标题</div>
-        <div class="home">房屋面积</div>
-        <div class="phone">联系电话</div>
-        <div class="status">交易状态</div>
-        <div class="address">地址</div>
+        <div class="title">{{house.title}}</div>
+        <div class="home">{{house.mianji}}</div>
+        <div class="phone">{{house.fangdongPhone}}</div>
+        <div class="status">{{house.status}}</div>
+        <div class="address">{{house.address}}</div>
         <div class="operation">
           <button class="mrb" type="button"><span>编辑</span></button>
           <button class="mrb warn" type="button"><span>删除</span></button>

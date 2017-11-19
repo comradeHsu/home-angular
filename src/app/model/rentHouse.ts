@@ -3,19 +3,19 @@
  */
 export class RentHouse {
   title: string;
-  author: string;
-  price: number;
-  rentStyle: string;
-  fangxiang: string;
-  floor: number;
-  huxing: string;
-  zhuangxiu: string;
+  author?: string;
+  price?: number;
+  rentStyle?: string;
+  fangxiang?: string;
+  floor?: number;
+  huxing?: string;
+  zhuangxiu?: string;
   mianji: number;
   address: string;
   fangdongPhone: number;
-  yewuyuanPhone: number;
+  yewuyuanPhone?: number;
   status: number;
-  isPublic: string;
-  image: string[];
-  desc: string;
+  isPublic?: string;
+  image?: string[];
+  desc?: string;
 }

@@ -32,6 +32,10 @@ const routes: Routes = [
       {
         path: 'addRent',
         component: AdminRentAddComponent
+      },
+      {
+        path: 'rentList',
+        component: AdminRentListComponent
       }
     ]
   }
