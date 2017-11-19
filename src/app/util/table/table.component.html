@@ -15,9 +15,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let house of houses">
-      <td>
-        <mat-checkbox labelPosition="after" class="selector" checked="true">
+    <tr *ngFor="let house of houses; let check of checks; let xy of indexs">
+      <td (click)="selected(xy)" >
+        <mat-checkbox labelPosition="after" class="selector" [checked]="check.checked">
         </mat-checkbox>
         <div class="id">ID</div>
         <div class="title">{{house.title}}</div>
