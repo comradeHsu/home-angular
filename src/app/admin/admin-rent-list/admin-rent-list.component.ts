@@ -9,19 +9,19 @@ import {RentHouse} from '../../model/rentHouse';
 export class AdminRentListComponent implements OnInit {
   houses: RentHouse[] =  [
     {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0,
+      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
       zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
     {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0,
+      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
       zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
     {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0,
+      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
       zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
     {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0,
+      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
       zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
     {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0,
+      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
       zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
     ]
   constructor() { }

@@ -18,4 +18,5 @@ export class RentHouse {
   isPublic?: string;
   image?: string[];
   desc?: string;
+  checked: string;
 }
