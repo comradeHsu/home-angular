@@ -1,8 +1,8 @@
 <table matSort (matSortChange)="sortData($event)">
   <thead>
     <tr>
-      <td class="head">
-        <mat-checkbox labelPosition="after" class="selector">
+      <td class="head" (click)="selectedAll()">
+        <mat-checkbox labelPosition="after" class="selector" [checked]="singleSelect">
         </mat-checkbox>
         <div class="id">ID</div>
         <div class="title">标题</div>
