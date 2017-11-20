@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <td class="head" (click)="selectedAll()">
-        <mat-checkbox labelPosition="after" class="selector" [checked]="singleSelect">
+        <mat-checkbox labelPosition="after" color="primary" class="selector" [checked]="singleSelect">
         </mat-checkbox>
         <div class="id">ID</div>
         <div class="title">标题</div>
@@ -17,7 +17,7 @@
   <tbody>
     <tr *ngFor="let house of houses ">
       <td (click)="selected(house)" >
-        <mat-checkbox labelPosition="after" class="selector" [checked]="house.checked">
+        <mat-checkbox labelPosition="after" color="primary" class="selector" [checked]="house.checked">
         </mat-checkbox>
         <div class="id">ID</div>
         <div class="title">{{house.title}}</div>
