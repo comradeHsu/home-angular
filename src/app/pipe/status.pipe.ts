@@ -7,14 +7,17 @@ export class StatusPipe implements PipeTransform {
   transform(value: number): string {
     let status: string;
     switch(value) {
-      case 1 :
+      case 0 :
         status = '已打电话';
         break;
+      case 1 :
+        status = '交易中';
+        break;
       case 2 :
+        status = '已付款';
         break;
       case 3 :
-        break;
-      case 4 :
+        status = '已完成';
         break;
       default:
         break;
