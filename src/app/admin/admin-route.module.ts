@@ -36,6 +36,10 @@ const routes: Routes = [
       {
         path: 'rentList',
         component: AdminRentListComponent
+      },
+      {
+        path: 'houseList',
+        component: AdminHouseListComponent
       }
     ]
   }
