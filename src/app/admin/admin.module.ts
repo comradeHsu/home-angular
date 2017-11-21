@@ -31,7 +31,10 @@ import {ShareService} from '../service/share.service';
     AdminRentListComponent,
     UploadDialogComponent
   ],
-  entryComponents: [UploadDialogComponent],
+  entryComponents: [
+    UploadDialogComponent,
+    AdminHouseAddComponent
+  ],
   providers: [
     {provide: 'share', useClass: ShareService}
   ],
