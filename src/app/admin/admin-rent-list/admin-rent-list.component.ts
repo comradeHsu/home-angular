@@ -7,22 +7,17 @@ import {RentHouse} from '../../model/rentHouse';
   styleUrls: ['./admin-rent-list.component.css']
 })
 export class AdminRentListComponent implements OnInit {
-  houses: RentHouse[] =  [
-    {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
-      zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
-    {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
-      zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
-    {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
-      zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
-    {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
-      zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
-    {title: '碧桂园一期', author: '', floor: 0, desc: '', fangxiang: '', huxing: '',
-      image: null, isPublic: '1', price: 10, rentStyle: '', yewuyuanPhone: 0, checked: '',
-      zhuangxiu: '',  mianji: 20, fangdongPhone: 18330032576, status: 1, address: '龙东大道123号'},
+  houses =  [
+    {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
+      phone: '18330032576', status: '1', addr: '龙东大道123号'},
+    {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
+      phone: '18330032576', status: '1', addr: '龙东大道123号'},
+    {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
+      phone: '18330032576', status: '1', addr: '龙东大道123号'},
+    {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
+      phone: '18330032576', status: '1', addr: '龙东大道123号'},
+    {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
+      phone: '18330032576', status: '1', addr: '龙东大道123号'}
     ]
   constructor() { }
 

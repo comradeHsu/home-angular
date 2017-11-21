@@ -1,7 +1,8 @@
+import {House} from './house';
 /**
  * Created by Administrator on 2017/11/21.
  */
-export class DealHouse {
+export class DealHouse extends House {
   id: string;
   totalPrice: string;
   refPrice: string;
@@ -9,5 +10,4 @@ export class DealHouse {
   equityYear: string;
   buildYear: string;
   images: string[];
-  checked: string;
 }

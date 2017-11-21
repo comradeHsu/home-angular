@@ -20,4 +20,5 @@ export class House {
   isPublic: string;
   desc: string;
   type: string;
+  checked: string;
 }
