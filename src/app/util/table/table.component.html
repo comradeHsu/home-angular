@@ -26,7 +26,7 @@
         <div class="status">{{house.status | status}}</div>
         <div class="address">{{house.addr}}</div>
         <div class="operation">
-          <button class="mrb" type="button"><span>编辑</span></button>
+          <button class="mrb" type="button" (click)="openEdit()"><span>编辑</span></button>
           <button class="mrb warn" type="button"><span>删除</span></button>
         </div>
       </td>

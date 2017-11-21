@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {RentHouse} from '../../model/rentHouse';
 
 @Component({
@@ -8,6 +8,7 @@ import {RentHouse} from '../../model/rentHouse';
 })
 export class TableComponent implements OnInit {
   @Input() houses: RentHouse[];
+  @Output() edit = new EventEmitter<boolean>();
   constructor() { }
 
   select = false;
@@ -33,6 +34,10 @@ export class TableComponent implements OnInit {
     }
     this.select = this.select === false ? true : false;
     this.singleSelect = this.select === true ? 'checked' : '';
+  }
+
+  openEdit() {
+    this.edit.emit(true);
   }
 
 }
