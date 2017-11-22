@@ -1,16 +1,20 @@
+/**
+ * Created by Administrator on 2017/11/22.
+ */
 import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {File} from '../../model/file';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {Constant} from '../../common/constant';
 import {DealHouse} from '../../model/dealHouse';
+import {UploadDialogComponent} from './admin-house-add.component';
 
 @Component({
-  selector: 'app-admin-house-add',
+  selector: 'app-admin-house-add-dialog',
   templateUrl: './admin-house-add.component.html',
   styleUrls: ['./admin-house-add.component.css']
 })
-export class AdminHouseAddComponent implements OnInit {
+export class AdminHouseAddDialogComponent implements OnInit {
   // appModule中导入的模块并不能在子模块中直接使用，还需要导入
   // formControl指令需要FormsModule, ReactiveFormsModule 的支持
   phoneFormControl = new FormControl('', [
@@ -37,7 +41,7 @@ export class AdminHouseAddComponent implements OnInit {
   constructor(private render: Renderer2,
               @Inject('share')private share,
               public dialog: MatDialog,
-              public dialogRef: MatDialogRef<AdminHouseAddComponent>,
+              public dialogRef: MatDialogRef<AdminHouseAddDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any) {
     this.share.getDomin().subscribe(res => this.domain = res);
     this.share.getQiniuToken().subscribe(res => this.token = res);
@@ -87,32 +91,3 @@ export class AdminHouseAddComponent implements OnInit {
   }
 
 }
-
-@Component({
-  selector: 'app-upload-dialog',
-  template: '<div class="dialog"><img [src]="src" alt="图片已失效" class="image"></div>',
-  styles: [`.dialog{
-  width: 200px;
-  height: 200px;
-  position: relative;
-}
-.image{
-  position:absolute;
-  width: 100%;
-  height: 100%;
-}`]
-})
-export class UploadDialogComponent {
-  src: string;
-  constructor(
-    public dialogRef: MatDialogRef<UploadDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
-    this.src = data.src;
-  }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-}
-

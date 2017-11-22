@@ -12,6 +12,7 @@ import {AdminHouseAddComponent, UploadDialogComponent} from './admin-house-add/a
 import {FormsModule} from '@angular/forms';
 import {UtilModule} from '../util/util.module';
 import {ShareService} from '../service/share.service';
+import {AdminHouseAddDialogComponent} from './admin-house-add/admin-house-add-dialog.component';
 
 @NgModule({
   imports: [
@@ -29,11 +30,12 @@ import {ShareService} from '../service/share.service';
     AdminHouseAddComponent,
     AdminRentAddComponent,
     AdminRentListComponent,
-    UploadDialogComponent
+    UploadDialogComponent,
+    AdminHouseAddDialogComponent
   ],
   entryComponents: [
     UploadDialogComponent,
-    AdminHouseAddComponent
+    AdminHouseAddDialogComponent
   ],
   providers: [
     {provide: 'share', useClass: ShareService}

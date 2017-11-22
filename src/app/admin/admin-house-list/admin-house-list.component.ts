@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DealHouse} from '../../model/dealHouse';
 import {AdminHouseAddComponent} from '../admin-house-add/admin-house-add.component';
 import {MatDialog} from '@angular/material';
+import {AdminHouseAddDialogComponent} from '../admin-house-add/admin-house-add-dialog.component';
 
 @Component({
   selector: 'app-admin-house-list',
@@ -27,16 +28,15 @@ export class AdminHouseListComponent implements OnInit {
   }
 
   editDialog(value: DealHouse) {
-    let dialogRef = this.dialog.open(AdminHouseAddComponent, {
+    let dialogRef = this.dialog.open(AdminHouseAddDialogComponent, {
       width: '70%',
       height: '70%',
-      data: { }
+      data: {house: value }
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
-    console.log(value);
   }
 
 }

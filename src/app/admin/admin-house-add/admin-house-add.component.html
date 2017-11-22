@@ -9,7 +9,7 @@
   <div class="content-wrapper">
     <form>
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="房产标题" required/>
+        <input type="text" matInput name="title" [(ngModel)]="house.title" class="mat-input-element" placeholder="房产标题" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>标题不能为空</mat-error>
       </mat-form-field>
