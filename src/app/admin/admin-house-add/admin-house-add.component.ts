@@ -8,7 +8,10 @@ import {DealHouse} from '../../model/dealHouse';
 @Component({
   selector: 'app-admin-house-add',
   templateUrl: './admin-house-add.component.html',
-  styleUrls: ['./admin-house-add.component.css']
+  styleUrls: [
+    './admin-house-add.component.css',
+    './admin-house-add-noDialog.component.css'
+  ]
 })
 export class AdminHouseAddComponent implements OnInit {
   // appModule中导入的模块并不能在子模块中直接使用，还需要导入
