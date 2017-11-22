@@ -31,7 +31,7 @@ export class AdminHouseAddDialogComponent implements OnInit {
   ];
 
   house: DealHouse;
-  nodialog: false;
+  noDialog: false;
   files: File[] = [
     new File()
   ];
