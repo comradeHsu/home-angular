@@ -15,8 +15,6 @@ import {UploadDialogComponent} from './admin-house-add.component';
   styleUrls: ['./admin-house-add.component.css']
 })
 export class AdminHouseAddDialogComponent implements OnInit {
-  // appModule中导入的模块并不能在子模块中直接使用，还需要导入
-  // formControl指令需要FormsModule, ReactiveFormsModule 的支持
   phoneFormControl = new FormControl('', [
     Validators.required,
     Validators.pattern(Constant.PHONE_REGX)]);
@@ -33,6 +31,7 @@ export class AdminHouseAddDialogComponent implements OnInit {
   ];
 
   house: DealHouse;
+  nodialog: false;
   files: File[] = [
     new File()
   ];
@@ -45,23 +44,10 @@ export class AdminHouseAddDialogComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) public data: any) {
     this.share.getDomin().subscribe(res => this.domain = res);
     this.share.getQiniuToken().subscribe(res => this.token = res);
-    // this.domain = 'http://image.dingshengfangchan.com';
-    // this.token = 'ZUT5S2y2msEEmO8t7F9Qakn9PkOpfJshC4VQQKJo:Ks2ot2DRb3nzA6PWZL5EReHnUVo=' +
-    //   ':eyJzY29wZSI6ImRpbmdzaGVuZyIsImRlYWRsaW5lIjoxNTEwMTU3NjA1fQ==';
     this.house = data.house;
   }
 
   ngOnInit() {
-    // const eles = document.getElementsByClassName('upload-item');
-    // console.log(eles);
-    // for ( let i = 0; i < eles.length; i++) {
-    //   eles.item(i).addEventListener('mouseover', data => {
-    //     eles.item(i).setAttribute('style', 'border: 1px dashed #8824DA');
-    //   });
-    //   eles.item(i).addEventListener('mouseout', data => {
-    //     eles.item(i).setAttribute('style', 'border: 1px dashed #c0ccda');
-    //   });
-    // }
   }
 
   uploadSuccess(file: File) {
@@ -76,9 +62,6 @@ export class AdminHouseAddDialogComponent implements OnInit {
     this.files.splice(index, 1);
   }
 
-  // mouseOver(item: ElementRef) {
-  //   item.nativeElement.addAttribute('style', 'border: 1px dashed #8824DA');
-  // }
   openDialog(): void {
     let dialogRef = this.dialog.open(UploadDialogComponent, {
       width: '250px',

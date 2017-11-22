@@ -29,6 +29,7 @@ export class AdminHouseAddComponent implements OnInit {
   ];
 
   house: DealHouse = new DealHouse();
+  noDialog = true;
   files: File[] = [
     new File()
   ];
