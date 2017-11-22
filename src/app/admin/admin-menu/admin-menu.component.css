@@ -83,6 +83,7 @@ ul{
   width: 150px;
   display: inline;
   padding: 0 30px 0 37px;
+  color: #000000bf;
 }
 .hide{
   height: 114px;
@@ -112,5 +113,17 @@ span{
   text-shadow: 5px 5px 5px #6b2d38;
   font-family: "Comic Sans MS", cursive, sans-serif;
   padding-left: 27px;
+}
+a:link{
+  text-decoration:none;
+}
+a:visited{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:none;
+}
+a:active{
+  text-decoration:none;
 }
 

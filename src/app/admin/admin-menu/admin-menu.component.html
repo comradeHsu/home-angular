@@ -37,10 +37,10 @@
       </div>
       <ul class="menu hide" *ngIf="hide[0]">
         <div  class="li-item" #item1 (mouseover)="mouse($event,item1)" (mouseout)="mouse($event,item1)">
-          <li class="menu-item" >租赁列表</li>
+          <a routerLink="/admin/rentList" class="menu-item" >租赁列表</a>
         </div>
         <div class="li-item" #item2 (mouseover)="mouse($event,item2)" (mouseout)="mouse($event,item2)">
-          <li class="menu-item"  >添加房产</li>
+          <a routerLink="/admin/addRent" class="menu-item"  >添加房产</a>
         </div>
       </ul>
     </li>
@@ -54,10 +54,10 @@
       </div>
       <ul class="menu hide" *ngIf="hide[1]">
         <div class="li-item" #item3 (mouseover)="mouse($event,item3)" (mouseout)="mouse($event,item3)">
-          <li class="menu-item">房产列表</li>
+          <a routerLink="/admin/houseList" class="menu-item">房产列表</a>
         </div>
         <div class="li-item" #item4 (mouseover)="mouse($event,item4)" (mouseout)="mouse($event,item4)">
-          <li class="menu-item">添加房产</li>
+          <a routerLink="/admin/addHouse" class="menu-item">添加房产</a>
         </div>
       </ul>
     </li>
@@ -71,7 +71,7 @@
       </div>
       <ul class="menu single" *ngIf="hide[2]">
         <div class="li-item" #item5 (mouseover)="mouse($event,item5)" (mouseout)="mouse($event,item5)">
-          <li class="menu-item">用户列表</li>
+          <a routerLink="/admin/userList" class="menu-item">用户列表</a>
         </div>
       </ul>
     </li>
