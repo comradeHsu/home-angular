@@ -10,4 +10,8 @@ export class DealHouse extends House {
   equityYear: string;
   buildYear: string;
   images: string[];
+
+  constructor() {
+    super();
+  }
 }

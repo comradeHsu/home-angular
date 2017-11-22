@@ -28,7 +28,7 @@ export class AdminHouseAddComponent implements OnInit {
     {viewValue: '已完成', value: '3'}
   ];
 
-  house: DealHouse;
+  house: DealHouse = new DealHouse();
   files: File[] = [
     new File()
   ];
@@ -36,15 +36,12 @@ export class AdminHouseAddComponent implements OnInit {
   private token: string;
   constructor(private render: Renderer2,
               @Inject('share')private share,
-              public dialog: MatDialog,
-              public dialogRef: MatDialogRef<AdminHouseAddComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) {
+              public dialog: MatDialog) {
     this.share.getDomin().subscribe(res => this.domain = res);
     this.share.getQiniuToken().subscribe(res => this.token = res);
     // this.domain = 'http://image.dingshengfangchan.com';
     // this.token = 'ZUT5S2y2msEEmO8t7F9Qakn9PkOpfJshC4VQQKJo:Ks2ot2DRb3nzA6PWZL5EReHnUVo=' +
     //   ':eyJzY29wZSI6ImRpbmdzaGVuZyIsImRlYWRsaW5lIjoxNTEwMTU3NjA1fQ==';
-    this.house = data.house;
   }
 
   ngOnInit() {
