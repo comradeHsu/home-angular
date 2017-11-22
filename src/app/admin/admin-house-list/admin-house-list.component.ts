@@ -26,15 +26,17 @@ export class AdminHouseListComponent implements OnInit {
   ngOnInit() {
   }
 
-  editDialog(value: boolean) {
+  editDialog(value: DealHouse) {
     let dialogRef = this.dialog.open(AdminHouseAddComponent, {
-      width: '600px',
+      width: '70%',
+      height: '70%',
       data: { }
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+    console.log(value);
   }
 
 }

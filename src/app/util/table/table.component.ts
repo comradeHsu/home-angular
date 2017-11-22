@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {RentHouse} from '../../model/rentHouse';
+import {House} from '../../model/house';
 
 @Component({
   selector: 'app-table',
@@ -7,8 +8,8 @@ import {RentHouse} from '../../model/rentHouse';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  @Input() houses: RentHouse[];
-  @Output() edit = new EventEmitter<boolean>();
+  @Input() houses: House[];
+  @Output() edit = new EventEmitter<House>();
   constructor() { }
 
   select = false;
@@ -36,8 +37,8 @@ export class TableComponent implements OnInit {
     this.singleSelect = this.select === true ? 'checked' : '';
   }
 
-  openEdit() {
-    this.edit.emit(true);
+  openEdit<T extends House>(house: T) {
+    this.edit.emit(house);
   }
 
 }
