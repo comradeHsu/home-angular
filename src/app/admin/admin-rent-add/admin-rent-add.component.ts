@@ -62,6 +62,10 @@ export class AdminRentAddComponent implements OnInit {
     this.files.splice(index, 1);
   }
 
+  cancel() {
+    this.house = new RentHouse();
+  }
+
   // mouseOver(item: ElementRef) {
   //   item.nativeElement.addAttribute('style', 'border: 1px dashed #8824DA');
   // }

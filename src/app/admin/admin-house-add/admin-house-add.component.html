@@ -148,7 +148,7 @@
       <div class="in">
         <button mat-raised-button class="mrb add" type="button">立即创建</button>
         <button mat-raised-button class="mrb cancel" type="button" mat-dialog-close *ngIf="noDialog != true">取消</button>
-        <button mat-raised-button class="mrb cancel" type="button" *ngIf="noDialog == true">取消</button>
+        <button mat-raised-button class="mrb cancel" type="button" *ngIf="noDialog == true" (click)="cancel()">取消</button>
       </div>
     </form>
 
