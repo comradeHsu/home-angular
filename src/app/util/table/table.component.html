@@ -27,7 +27,7 @@
         <div class="address">{{house.addr}}</div>
         <div class="operation">
           <button class="mrb" type="button" (click)="openEdit(house)"><span>编辑</span></button>
-          <button class="mrb warn" type="button"><span>删除</span></button>
+          <button class="mrb warn" type="button" (click)="deleted(house.id)"><span>删除</span></button>
         </div>
       </td>
     </tr>

@@ -10,6 +10,7 @@ import {House} from '../../model/house';
 export class TableComponent implements OnInit {
   @Input() houses: House[];
   @Output() edit = new EventEmitter<House>();
+  @Output() deletedHouse = new EventEmitter<string>();
   constructor() { }
 
   select = false;
@@ -39,6 +40,10 @@ export class TableComponent implements OnInit {
 
   openEdit<T extends House>(house: T) {
     this.edit.emit(house);
+  }
+
+  deleted(id: string) {
+    this.deletedHouse.emit(id);
   }
 
 }

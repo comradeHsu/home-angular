@@ -39,4 +39,7 @@ export class AdminHouseListComponent implements OnInit {
     });
   }
 
+  delHouse(id: string) {
+  }
+
 }

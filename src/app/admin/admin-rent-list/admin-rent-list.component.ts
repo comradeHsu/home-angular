@@ -38,4 +38,7 @@ export class AdminRentListComponent implements OnInit {
     });
   }
 
+  delHouse(id: string) {
+  }
+
 }
