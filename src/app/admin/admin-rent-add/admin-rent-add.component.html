@@ -9,7 +9,7 @@
   <div class="content-wrapper">
     <form>
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="房产标题" required/>
+        <input type="text" matInput name="title" [(ngModel)]="house.title" class="mat-input-element" placeholder="房产标题" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>标题不能为空</mat-error>
       </mat-form-field>
@@ -21,56 +21,56 @@
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="租赁价位" required/>
+        <input type="text" matInput name="rentPrice" [(ngModel)]="house.rentPrice" class="mat-input-element" placeholder="租赁价位" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>价格不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="租赁方式" required/>
+        <input type="text" matInput name="rentMethod" [(ngModel)]="house.rentMethod" class="mat-input-element" placeholder="租赁方式" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>租赁方式不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="房产面积" required/>
+        <input type="text" matInput name="area" [(ngModel)]="house.area" class="mat-input-element" placeholder="房产面积" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>面积不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="户型" required/>
+        <input type="text" matInput name="houseType" [(ngModel)]="house.houseType" class="mat-input-element" placeholder="户型" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>户型不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="房屋朝向" required/>
+        <input type="text" matInput name="houseOrientation" [(ngModel)]="house.houseOrientation" class="mat-input-element" placeholder="房屋朝向" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>朝向不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="所在楼层" required/>
+        <input type="text" matInput name="floor" [(ngModel)]="house.floor" class="mat-input-element" placeholder="所在楼层" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>楼层不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="装修情况" required/>
+        <input type="text" matInput name="decorate" [(ngModel)]="house.decorate" class="mat-input-element" placeholder="装修情况" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
-        <input type="text" matInput name="title" class="mat-input-element" placeholder="房产地址" required/>
+        <input type="text" matInput name="addr" [(ngModel)]="house.addr" class="mat-input-element" placeholder="房产地址" required/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error>地址不能为空</mat-error>
       </mat-form-field>
 
       <mat-form-field class="in">
         <span  matPrefix> +86&nbsp; </span>
-        <input matInput name="title" class="mat-input-element" placeholder="房东电话" required
+        <input matInput name="phone" [(ngModel)]="house.phone" class="mat-input-element" placeholder="房东电话" required
                [formControl]="phoneFormControl"/>
         <mat-icon  matSuffix>mode_edit</mat-icon>
         <mat-error *ngIf="phoneFormControl.hasError('pattern')">
@@ -95,7 +95,7 @@
       </mat-form-field>
 
       <mat-form-field class="in">
-        <mat-select placeholder="交易状态">
+        <mat-select placeholder="交易状态" name="status" [(ngModel)]="house.status">
           <mat-option *ngFor="let xu of status" [value]="xu.value">
             {{ xu.viewValue }}
           </mat-option>
@@ -123,7 +123,7 @@
       </div>
 
       <mat-form-field class="in textArea">
-        <textarea  matInput  placeholder ="房屋详细信息"> </textarea >
+        <textarea  matInput name="desc" [(ngModel)]="house.desc" placeholder ="房屋详细信息"> </textarea >
       </mat-form-field >
       <br>
 

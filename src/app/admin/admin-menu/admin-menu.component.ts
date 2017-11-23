@@ -32,7 +32,7 @@ export class AdminMenuComponent implements OnInit {
     const eles = document.getElementsByClassName('able');
     for (let i = 0; i < eles.length; i++) {
       eles.item(i).addEventListener('mouseover', data => {
-        eles.item(i).setAttribute('style', 'background-color:#6b9dae');
+        eles.item(i).setAttribute('style', 'background-color:rgba(0, 20, 255, 0.5)');
       });
       eles.item(i).addEventListener('mouseout', data => {
         eles.item(i).setAttribute('style', 'background-color:#eef1f6');
@@ -61,7 +61,7 @@ export class AdminMenuComponent implements OnInit {
   mouse(event: MouseEvent, ele: Element) {
     const target = (<Element>event.target) || event.srcElement;
     if (event.type === 'mouseover') {
-      ele.setAttribute('style', 'background-color:#6b9dae');
+      ele.setAttribute('style', 'background-color:rgba(0, 20, 255, 0.5)');
     }
     if (event.type === 'mouseout') {
       ele.setAttribute('style', 'background-color:#eef1f6');
