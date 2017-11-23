@@ -7,4 +7,8 @@ export class RentHouse extends House {
   rentPrice: string;
   rentMethod: string;
   images: string[];
+
+  constructor() {
+    super();
+  }
 }

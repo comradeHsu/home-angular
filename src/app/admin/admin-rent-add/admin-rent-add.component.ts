@@ -4,11 +4,15 @@ import {Constant} from '../../common/constant';
 import {File} from '../../model/file';
 import {MatDialog} from '@angular/material';
 import {UploadDialogComponent} from '../admin-house-add/admin-house-add.component';
+import {RentHouse} from '../../model/rentHouse';
 
 @Component({
   selector: 'app-admin-rent-add',
   templateUrl: './admin-rent-add.component.html',
-  styleUrls: ['./admin-rent-add.component.css']
+  styleUrls: [
+    './admin-rent-add.component.css',
+    './admin-rent-add-noDialog.css'
+  ]
 })
 export class AdminRentAddComponent implements OnInit {
   phoneFormControl = new FormControl('', [
@@ -26,6 +30,8 @@ export class AdminRentAddComponent implements OnInit {
     {viewValue: '已完成', value: '3'}
   ];
 
+  house: RentHouse = new RentHouse();
+  noDialog = true;
   files: File[] = [
     new File()
   ];

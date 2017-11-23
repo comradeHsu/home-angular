@@ -1,5 +1,5 @@
 <div id="docker">
-  <div class="header">
+  <div class="header" *ngIf="noDialog == true">
     <strong class="desc">添加房产</strong>
     <div class="location">
       <span>房产管理 ：</span>
@@ -129,7 +129,8 @@
 
       <div class="in">
         <button mat-raised-button class="mrb add" type="button">立即创建</button>
-        <button mat-raised-button class="mrb cancel" type="button">取消</button>
+        <button mat-raised-button class="mrb cancel" type="button" mat-dialog-close *ngIf="noDialog != true">取消</button>
+        <button mat-raised-button class="mrb cancel" type="button" *ngIf="noDialog == true">取消</button>
       </div>
     </form>
 
