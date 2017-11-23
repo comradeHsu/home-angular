@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RentHouse} from '../../model/rentHouse';
 import {AdminRentAddDialogComponent} from '../admin-rent-add/admin-rent-add-dialog.component';
-import {MatDialog} from '@angular/material';
+import {MatDialog, MatPaginatorIntl} from '@angular/material';
 
 @Component({
   selector: 'app-admin-rent-list',
@@ -21,7 +21,12 @@ export class AdminRentListComponent implements OnInit {
     {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
       phone: '18330032576', status: '1', addr: '龙东大道123号'}
     ]
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              public matPage: MatPaginatorIntl) {
+    this.matPage.itemsPerPageLabel = '每页数量:';
+    this.matPage.nextPageLabel = '下一页';
+    this.matPage.previousPageLabel = '上一页';
+  }
 
   ngOnInit() {
   }
