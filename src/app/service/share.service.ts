@@ -15,22 +15,22 @@ export class ShareService {
   constructor(private http: Http) { }
 
   getDomin(): Observable<any> {
-    let url = `${Constant.API_URL}/token/index.php?r=getDomain`;
+    let url = `/token/index.php?r=getDomain`;
     return this.http.get(url)
       .map(res => {
-        let response = res.json() as Response;
-        let domain = response.data.domain;
+        let response = res.json();
+        let domain = response.domain;
         this.subject.next(domain);
         return domain;
       });
   }
 
   getQiniuToken(): Observable<string> {
-    let url = `${Constant.API_URL}/token/index.php?r=getToken`;
+    let url = `/token/index.php?r=getToken`;
     return this.http.get(url)
       .map(res => {
-        let response = res.json() as Response;
-        let token = response.data.token;
+        let response = res.json();
+        let token = response.token;
         this.token.next(token);
         return token;
       });
