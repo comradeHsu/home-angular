@@ -5,6 +5,7 @@ import {CommonsModule} from '../common/commons.module';
 import {ShareService} from '../service/share.service';
 import { TableComponent } from './table/table.component';
 import { StatusPipe } from '../pipe/status.pipe';
+import { UserListComponent } from './userList/user-list/user-list.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { StatusPipe } from '../pipe/status.pipe';
   declarations: [
     UploadComponent,
     TableComponent,
-	StatusPipe
+	StatusPipe,
+	UserListComponent
   ],
   exports: [
     UploadComponent,
