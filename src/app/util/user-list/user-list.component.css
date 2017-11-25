@@ -1,0 +1,61 @@
+table{
+  display: table;
+  font-size: 15px;
+  border: 1px solid;
+  color: #1f2d3d;
+  border-color: rgba(0, 0, 255, 0.29);
+  background-color: rgba(10, 62, 123, 0.38);
+  width: 100%;
+}
+div{
+  float:left;
+  width: 11.5%;
+  height: 40px;
+  text-align: center;
+}
+.selector{
+  float:left;
+  width: 3.6%;
+  padding-left: 1.8%;
+}
+thead{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.head{
+  border: 1px;
+  background-color: rgba(154, 197, 218, 0.45);
+}
+.id{
+  width: 6.8%;
+}
+.phone{
+  width: 16%;
+}
+.home{
+  width: 11%;
+}
+.type{
+  width: 22.8%;
+}
+td{
+  background-color: rgba(243, 243, 243, 0.98);
+  line-height: 40px;
+}
+tbody td:hover{
+  background-color: rgba(73, 177, 255, 0.57);
+}
+.mrb{
+  border-radius: 4px;
+  white-space: nowrap;
+  background: #fff;
+  color: #1f2d3d;
+  box-sizing: border-box;
+  width: 38%;
+  height: 66%;
+}
+.warn{
+  background-color: rgba(214, 37, 37, 0.78);
+  color: white;
+}

@@ -1,3 +1,29 @@
-<p>
-  user-list works!
-</p>
+<table matSort (matSortChange)="sortData($event)">
+  <thead>
+  <tr>
+    <td class="head" (click)="selectedAll()">
+      <mat-checkbox labelPosition="after" color="primary" class="selector" [checked]="singleSelect">
+      </mat-checkbox>
+      <div class="id">ID</div>
+      <div class="name">用户名</div>
+      <div class="type">类型</div>
+      <div class="operation">操作</div>
+    </td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users ">
+    <td>
+      <mat-checkbox labelPosition="after" color="primary" class="selector" [checked]="user.checked">
+      </mat-checkbox>
+      <div class="id">ID</div>
+      <div class="name">{{user.username}}</div>
+      <div class="type">{{user.type}}</div>
+      <div class="operation">
+        <button class="mrb warn" type="button" (click)="deleted(user.id)"><span>删除</span></button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

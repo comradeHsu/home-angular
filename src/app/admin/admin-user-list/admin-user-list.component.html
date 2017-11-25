@@ -14,7 +14,7 @@
       <button mat-raised-button color="primary" class="mrb" type="button">查询</button>
       <button mat-raised-button color="primary" class="mrb" type="button">新增</button>
     </div>
-    <app-table></app-table>
+    <app-user-list [users]="users"></app-user-list>
     <mat-paginator [length]="100"
                    [pageSize]="10"
                    [pageSizeOptions]="[10, 20, 25]">
