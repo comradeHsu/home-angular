@@ -18,7 +18,7 @@
       </mat-checkbox>
       <div class="id">ID</div>
       <div class="name">{{user.username}}</div>
-      <div class="type">{{user.type}}</div>
+      <div class="type">{{user.type | type}}</div>
       <div class="operation">
         <button class="mrb warn" type="button" (click)="deleted(user.id)"><span>删除</span></button>
       </div>

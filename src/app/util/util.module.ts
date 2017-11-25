@@ -6,6 +6,7 @@ import {ShareService} from '../service/share.service';
 import { TableComponent } from './table/table.component';
 import { StatusPipe } from '../pipe/status.pipe';
 import { UserListComponent } from './user-list/user-list.component';
+import {TypePipe} from '../pipe/type.pipe';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { UserListComponent } from './user-list/user-list.component';
     UploadComponent,
     TableComponent,
 	  StatusPipe,
-	  UserListComponent
+	  UserListComponent,
+    TypePipe
   ],
   exports: [
     UploadComponent,
