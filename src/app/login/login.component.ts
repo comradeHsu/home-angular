@@ -27,6 +27,7 @@ export class LoginComponent {
         this.auth = Object.assign({}, auth);
         if(!auth.hasError) {
           // 路由跳转
+          window.sessionStorage.setItem('user', auth.user);
           this.router.navigate(['admin']);
         }
         });

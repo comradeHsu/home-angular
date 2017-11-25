@@ -5,4 +5,7 @@ export class Response {
   status: number;
   msg: string;
   data: any;
+  totalCount?: number;
+  pageNumber?: number;
+  pageSize?: number;
 }

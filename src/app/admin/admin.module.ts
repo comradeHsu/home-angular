@@ -14,6 +14,7 @@ import {UtilModule} from '../util/util.module';
 import {ShareService} from '../service/share.service';
 import {AdminHouseAddDialogComponent} from './admin-house-add/admin-house-add-dialog.component';
 import {AdminRentAddDialogComponent} from './admin-rent-add/admin-rent-add-dialog.component';
+import {UserService} from '../service/user.service';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import {AdminRentAddDialogComponent} from './admin-rent-add/admin-rent-add-dialo
     AdminRentAddDialogComponent
   ],
   providers: [
-    {provide: 'share', useClass: ShareService}
+    {provide: 'share', useClass: ShareService},
+    {provide: 'user', useClass: UserService}
   ],
 })
 export class AdminModule { }

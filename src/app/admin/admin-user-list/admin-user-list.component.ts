@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {User} from '../../model/user';
 
 @Component({
@@ -7,18 +7,23 @@ import {User} from '../../model/user';
   styleUrls: ['./admin-user-list.component.css']
 })
 export class AdminUserListComponent implements OnInit {
-  users = [
-    {username: '李坤', type: 1, id: '12265362', checked: '', password: ''},
-    {username: '李坤', type: 1, id: '12265362', checked: '', password: ''},
-    {username: '李坤', type: 1, id: '12265362', checked: '', password: ''}
-  ];
-  constructor() { }
+  users: User[];
+  totalCount: number;
+  constructor(@Inject('user') private service) { }
 
   ngOnInit() {
+    this.getUsersPage();
   }
 
   deleteUser(id: string) {
 
   }
 
+  getUsersPage() {
+    this.service.getUserByPage(10, 0)
+      .subscribe(res => {
+        this.users = res.data;
+        this.totalCount = res.totalCount;
+      });
+  }
 }
