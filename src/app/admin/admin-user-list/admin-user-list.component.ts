@@ -17,4 +17,8 @@ export class AdminUserListComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteUser(id: string) {
+
+  }
+
 }

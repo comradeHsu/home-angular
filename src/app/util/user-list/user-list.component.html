@@ -13,7 +13,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let user of users ">
-    <td>
+    <td (click)="selected(user)">
       <mat-checkbox labelPosition="after" color="primary" class="selector" [checked]="user.checked">
       </mat-checkbox>
       <div class="id">ID</div>
