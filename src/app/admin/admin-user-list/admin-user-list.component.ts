@@ -11,7 +11,7 @@ export class AdminUserListComponent implements OnInit {
     {username: '李坤', type: 1, id: '12265362', checked: '', password: ''},
     {username: '李坤', type: 1, id: '12265362', checked: '', password: ''},
     {username: '李坤', type: 1, id: '12265362', checked: '', password: ''}
-  ]
+  ];
   constructor() { }
 
   ngOnInit() {

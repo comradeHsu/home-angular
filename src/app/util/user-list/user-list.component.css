@@ -28,16 +28,16 @@ thead{
   background-color: rgba(154, 197, 218, 0.45);
 }
 .id{
-  width: 6.8%;
+  width: 15.8%;
 }
-.phone{
-  width: 16%;
-}
-.home{
-  width: 11%;
+.name{
+  width: 25%;
 }
 .type{
-  width: 22.8%;
+  width: 30.8%;
+}
+.operation{
+  width: 17%;
 }
 td{
   background-color: rgba(243, 243, 243, 0.98);
