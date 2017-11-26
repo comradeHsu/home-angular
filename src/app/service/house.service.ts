@@ -17,4 +17,9 @@ export class HouseService {
       .map(res => res.json() as Response);
   }
 
+  deleteHouse(id: string): Observable<Response> {
+    let url = `${Constant.API_URL}/delete/${id}`;
+    return this.http.delete(url)
+      .map(res => res.json() as Response);
+  }
 }

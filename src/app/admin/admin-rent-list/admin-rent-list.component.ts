@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {RentHouse} from '../../model/rentHouse';
 import {AdminRentAddDialogComponent} from '../admin-rent-add/admin-rent-add-dialog.component';
-import {MatDialog, MatPaginatorIntl} from '@angular/material';
+import {MatDialog, MatPaginatorIntl, PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-admin-rent-list',
@@ -20,15 +20,23 @@ export class AdminRentListComponent implements OnInit {
       phone: '18330032576', status: '1', addr: '龙东大道123号'},
     {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
       phone: '18330032576', status: '1', addr: '龙东大道123号'}
-    ]
+    ];
+  userId: string;
+  pageSize: number;
+  pageNumber: number;
+  totalCount: number;
   constructor(public dialog: MatDialog,
-              public matPage: MatPaginatorIntl) {
+              public matPage: MatPaginatorIntl,
+              @Inject('house') private service) {
     this.matPage.itemsPerPageLabel = '每页数量:';
     this.matPage.nextPageLabel = '下一页';
     this.matPage.previousPageLabel = '上一页';
   }
 
   ngOnInit() {
+    this.pageSize = 10;
+    this.pageNumber = 0;
+    this.getPageHouses();
   }
 
   editDialog(value: RentHouse) {
@@ -44,6 +52,26 @@ export class AdminRentListComponent implements OnInit {
   }
 
   delHouse(id: string) {
+    this.service.deleteHouse(id)
+      .subscribe(res => {
+        if(res.status === 200){
+          this.getPageHouses();
+        }
+      });
+  }
+
+  getPageHouses() {
+    this.service.getHousesByUser(this.userId, 0, this.pageSize, this.pageNumber, null)
+      .subscribe(res => {
+        this.houses = res.data;
+        this.totalCount = res.totalCount;
+      });
+  }
+
+  changePage(page: PageEvent) {
+    this.pageNumber = page.pageIndex;
+    this.pageSize = page.pageSize;
+    this.getPageHouses();
   }
 
 }

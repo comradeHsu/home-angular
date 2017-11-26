@@ -57,6 +57,12 @@ export class AdminHouseListComponent implements OnInit {
   }
 
   delHouse(id: string) {
+    this.service.deleteHouse(id)
+      .subscribe(res => {
+        if(res.status === 200){
+          this.getPageHouses();
+        }
+      });
   }
 
   getPageHouses() {

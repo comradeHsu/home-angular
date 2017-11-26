@@ -16,7 +16,7 @@
     <app-table [houses]="houses" (edit)="editDialog($event)" (deletedHouse)="delHouse($event)"></app-table>
     <mat-paginator [length]="100"
                    [pageSize]="10"
-                   [pageSizeOptions]="[10, 20, 25]">
+                   [pageSizeOptions]="[10, 20, 25]" (page)="changePage($event)">
     </mat-paginator>
 
   </div>
