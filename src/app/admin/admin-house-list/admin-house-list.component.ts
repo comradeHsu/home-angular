@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {DealHouse} from '../../model/dealHouse';
 import {AdminHouseAddComponent} from '../admin-house-add/admin-house-add.component';
 import {MatDialog, MatPaginatorIntl, PageEvent} from '@angular/material';
@@ -26,17 +26,22 @@ export class AdminHouseListComponent implements OnInit {
   userId: string;
   pageSize: number;
   pageNumber: number;
+  totalCount: number;
   constructor(public dialog: MatDialog,
-                public matPage: MatPaginatorIntl) {
+                public matPage: MatPaginatorIntl,
+                @Inject('house')private service) {
     this.matPage.itemsPerPageLabel = '每页数量:';
     this.matPage.nextPageLabel = '下一页';
     this.matPage.previousPageLabel = '上一页';
 
     let user = window.sessionStorage['user'];
-    this.userId = user.id;
+    // this.userId = user.id;
   }
 
   ngOnInit() {
+    this.pageSize = 10;
+    this.pageNumber = 0;
+    this.getPageHouses();
   }
 
   editDialog(value: DealHouse) {
@@ -55,12 +60,17 @@ export class AdminHouseListComponent implements OnInit {
   }
 
   getPageHouses() {
-
+    this.service.getHousesByUser(this.userId, 1, this.pageSize, this.pageNumber, null)
+      .subscribe(res => {
+        this.houses = res.data;
+        this.totalCount = res.totalCount;
+      });
   }
 
   changePage(page: PageEvent) {
     this.pageNumber = page.pageIndex;
     this.pageSize = page.pageSize;
+    this.getPageHouses();
   }
 
 }
