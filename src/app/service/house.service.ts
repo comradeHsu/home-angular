@@ -3,6 +3,7 @@ import {Http} from '@angular/http';
 import {Constant} from '../common/constant';
 import {Response} from '../model/response';
 import {Observable} from 'rxjs/Observable';
+import {House} from '../model/house';
 
 @Injectable()
 export class HouseService {
@@ -21,5 +22,14 @@ export class HouseService {
     let url = `${Constant.API_URL}/delete/${id}`;
     return this.http.delete(url)
       .map(res => res.json() as Response);
+  }
+
+  getHouseById(id: string): Observable<House> {
+    let url = `${Constant.API_URL}/hourse/${id}`;
+    return this.http.get(url)
+      .map(res => {
+        let response = res.json() as Response;
+        return response.data as House;
+      });
   }
 }
