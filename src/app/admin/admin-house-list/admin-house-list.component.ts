@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {DealHouse} from '../../model/dealHouse';
 import {AdminHouseAddComponent} from '../admin-house-add/admin-house-add.component';
-import {MatDialog, MatPaginatorIntl} from '@angular/material';
+import {MatDialog, MatPaginatorIntl, PageEvent} from '@angular/material';
 import {AdminHouseAddDialogComponent} from '../admin-house-add/admin-house-add-dialog.component';
+import {User} from '../../model/user';
 
 @Component({
   selector: 'app-admin-house-list',
@@ -21,12 +22,18 @@ export class AdminHouseListComponent implements OnInit {
       phone: '18330032576', status: '1', addr: '龙东大道123号'},
     {title: '碧桂园一期', area: '30', images: null, isPublic: '1', checked: '',
       phone: '18330032576', status: '1', addr: '龙东大道123号'}
-  ]
+  ];
+  userId: string;
+  pageSize: number;
+  pageNumber: number;
   constructor(public dialog: MatDialog,
                 public matPage: MatPaginatorIntl) {
     this.matPage.itemsPerPageLabel = '每页数量:';
     this.matPage.nextPageLabel = '下一页';
     this.matPage.previousPageLabel = '上一页';
+
+    let user = window.sessionStorage['user'];
+    this.userId = user.id;
   }
 
   ngOnInit() {
@@ -45,6 +52,15 @@ export class AdminHouseListComponent implements OnInit {
   }
 
   delHouse(id: string) {
+  }
+
+  getPageHouses() {
+
+  }
+
+  changePage(page: PageEvent) {
+    this.pageNumber = page.pageIndex;
+    this.pageSize = page.pageSize;
   }
 
 }

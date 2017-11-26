@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/10/21.
  */
 export class User {
-  id: number;
+  id: string;
   username: string;
   password: string;
   type: number;
