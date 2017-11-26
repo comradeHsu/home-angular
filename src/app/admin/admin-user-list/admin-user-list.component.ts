@@ -22,7 +22,11 @@ export class AdminUserListComponent implements OnInit {
   }
 
   deleteUser(id: string) {
-
+    this.service.deleteUser(id)
+      .subscribe(res => {
+        if(res.status === 200){
+        }
+      });
   }
 
   getUsersPage() {

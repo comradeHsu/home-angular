@@ -21,4 +21,10 @@ export class UserService {
       });
   }
 
+  deleteUser(id: string): Observable<Response> {
+    let url = `${Constant.API_URL}/deleteUser/${id}`;
+    return this.http.delete(url)
+      .map(res => res.json() as Response);
+  }
+
 }

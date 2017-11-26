@@ -12,11 +12,11 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let user of users ">
+  <tr *ngFor="let user of users;">
     <td (click)="selected(user)">
       <mat-checkbox labelPosition="after" color="primary" class="selector" [checked]="user.checked">
       </mat-checkbox>
-      <div class="id">ID</div>
+      <div class="id">{{index}}</div>
       <div class="name">{{user.username}}</div>
       <div class="type">{{user.type | type}}</div>
       <div class="operation">

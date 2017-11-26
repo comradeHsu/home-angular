@@ -12,7 +12,10 @@ export class UserListComponent implements OnInit {
   constructor() { }
 
   select = false;
+
   singleSelect = '';
+
+  index = 0;
 
   ngOnInit() {
   }
