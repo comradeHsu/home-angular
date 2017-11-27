@@ -1,11 +1,11 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import { AdminUserListComponent } from '../admin/admin-user-list/admin-user-list.component';
-import { AdminRentListComponent } from '../admin/admin-rent-list/admin-rent-list.component';
-import { AdminRentAddComponent } from '../admin/admin-rent-add/admin-rent-add.component';
-import { AdminHouseListComponent } from '../admin/admin-house-list/admin-house-list.component';
-import { AdminHouseAddComponent } from '../admin/admin-house-add/admin-house-add.component';
-import { AdminComponent } from '../admin/admin.component';
+import { AdminUserListComponent } from './admin-user-list/admin-user-list.component';
+import { AdminRentListComponent } from './admin-rent-list/admin-rent-list.component';
+import { AdminRentAddComponent } from './admin-rent-add/admin-rent-add.component';
+import { AdminHouseListComponent } from './admin-house-list/admin-house-list.component';
+import { AdminHouseAddComponent } from './admin-house-add/admin-house-add.component';
+import { AdminComponent } from './admin.component';
 /**
  * Created by Administrator on 2017/10/23.
  import { Routes } from "@angular/router/router";
