@@ -38,4 +38,10 @@ export class HouseService {
     return this.http.put(url, house)
       .map(res => res.json() as Response);
   }
+
+  createHouse<T extends House>(house: T, type: string): Observable<Response> {
+    let url = `${Constant.API_URL}/create?type=${type}`;
+    return this.http.post(url, house)
+      .map(res => res.json() as Response);
+  }
 }
