@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import {CommonsModule} from '../common/commons.module';
-import {AdminRouteModule} from './admin-route.module';
+import {AdminRouteModule} from '../common/admin-route.module';
 import {AdminComponent} from './admin.component';
 import { AdminUserListComponent } from './admin-user-list/admin-user-list.component';
 import { AdminRentListComponent } from './admin-rent-list/admin-rent-list.component';
@@ -16,6 +16,8 @@ import {AdminHouseAddDialogComponent} from './admin-house-add/admin-house-add-di
 import {AdminRentAddDialogComponent} from './admin-rent-add/admin-rent-add-dialog.component';
 import {UserService} from '../service/user.service';
 import {HouseService} from '../service/house.service';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminFootComponent } from './admin-foot/admin-foot.component';
 
 @NgModule({
   imports: [
@@ -35,7 +37,9 @@ import {HouseService} from '../service/house.service';
     AdminRentListComponent,
     UploadDialogComponent,
     AdminHouseAddDialogComponent,
-    AdminRentAddDialogComponent
+    AdminRentAddDialogComponent,
+    AdminHeaderComponent,
+    AdminFootComponent
   ],
   entryComponents: [
     UploadDialogComponent,
