@@ -32,4 +32,10 @@ export class HouseService {
         return response.data as House;
       });
   }
+
+  updateHouse<T extends House>(house: T, type: string): Observable<Response> {
+    let url = `${Constant.API_URL}/upadte?type=${type}`;
+    return this.http.put(url, house)
+      .map(res => res.json() as Response);
+  }
 }
