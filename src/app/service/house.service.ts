@@ -44,4 +44,12 @@ export class HouseService {
     return this.http.post(url, house)
       .map(res => res.json() as Response);
   }
+
+  getHousesByType(type: number, pageSize: number, pageNumber: number, title: string): Observable<Response> {
+    let url = `${Constant.API_URL}/front/hourses/${type}`;
+    let page = title === null ? {pageSize: pageSize, pageNumber: pageNumber} :
+      {pageSize: pageSize, pageNumber: pageNumber, title: title};
+    return this.http.post(url, page)
+      .map(res => res.json() as Response);
+  }
 }
