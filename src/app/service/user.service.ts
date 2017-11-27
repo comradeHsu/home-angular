@@ -27,4 +27,10 @@ export class UserService {
       .map(res => res.json() as Response);
   }
 
+  insertUser(user: User): Observable<Response> {
+    let url = `${Constant.API_URL}/account`;
+    return this.http.post(url, user)
+      .map(res => res.json() as Response);
+  }
+
 }
