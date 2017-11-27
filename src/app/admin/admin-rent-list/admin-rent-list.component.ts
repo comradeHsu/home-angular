@@ -25,6 +25,7 @@ export class AdminRentListComponent implements OnInit {
   pageSize: number;
   pageNumber: number;
   totalCount: number;
+  title: string = null;
   constructor(public dialog: MatDialog,
               public matPage: MatPaginatorIntl,
               @Inject('house') private service) {
@@ -72,6 +73,15 @@ export class AdminRentListComponent implements OnInit {
     this.pageNumber = page.pageIndex;
     this.pageSize = page.pageSize;
     this.getPageHouses();
+  }
+
+  query() {
+    this.pageNumber = 0;
+    this.service.getHousesByUser(this.userId, 1, this.pageSize, this.pageNumber, this.title)
+      .subscribe(res => {
+        this.houses = res.data;
+        this.totalCount = res.totalCount;
+      });
   }
 
 }
