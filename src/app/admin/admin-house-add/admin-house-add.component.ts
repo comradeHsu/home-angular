@@ -43,22 +43,9 @@ export class AdminHouseAddComponent implements OnInit {
               public dialog: MatDialog) {
     this.share.getDomin().subscribe(res => this.domain = res);
     this.share.getQiniuToken().subscribe(res => this.token = res);
-    // this.domain = 'http://image.dingshengfangchan.com';
-    // this.token = 'ZUT5S2y2msEEmO8t7F9Qakn9PkOpfJshC4VQQKJo:Ks2ot2DRb3nzA6PWZL5EReHnUVo=' +
-    //   ':eyJzY29wZSI6ImRpbmdzaGVuZyIsImRlYWRsaW5lIjoxNTEwMTU3NjA1fQ==';
   }
 
   ngOnInit() {
-    // const eles = document.getElementsByClassName('upload-item');
-    // console.log(eles);
-    // for ( let i = 0; i < eles.length; i++) {
-    //   eles.item(i).addEventListener('mouseover', data => {
-    //     eles.item(i).setAttribute('style', 'border: 1px dashed #8824DA');
-    //   });
-    //   eles.item(i).addEventListener('mouseout', data => {
-    //     eles.item(i).setAttribute('style', 'border: 1px dashed #c0ccda');
-    //   });
-    // }
   }
 
   uploadSuccess(file: File) {

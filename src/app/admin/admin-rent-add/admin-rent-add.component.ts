@@ -42,9 +42,6 @@ export class AdminRentAddComponent implements OnInit {
               public dialog: MatDialog) {
     this.share.getDomin().subscribe(res => this.domain = res);
     this.share.getQiniuToken().subscribe(res => this.token = res);
-    // this.domain = 'http://image.dingshengfangchan.com';
-    // this.token = 'ZUT5S2y2msEEmO8t7F9Qakn9PkOpfJshC4VQQKJo:Ks2ot2DRb3nzA6PWZL5EReHnUVo=' +
-    //   ':eyJzY29wZSI6ImRpbmdzaGVuZyIsImRlYWRsaW5lIjoxNTEwMTU3NjA1fQ==';
   }
 
   ngOnInit() {
@@ -66,9 +63,6 @@ export class AdminRentAddComponent implements OnInit {
     this.house = new RentHouse();
   }
 
-  // mouseOver(item: ElementRef) {
-  //   item.nativeElement.addAttribute('style', 'border: 1px dashed #8824DA');
-  // }
   openDialog(): void {
     let dialogRef = this.dialog.open(UploadDialogComponent, {
       width: '250px',
