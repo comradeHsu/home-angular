@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import {CommonsModule} from '../common/commons.module';
-import {AdminRouteModule} from '../common/admin-route.module';
+import {AdminRouteModule} from './admin-route.module';
 import {AdminComponent} from './admin.component';
 import { AdminUserListComponent } from './admin-user-list/admin-user-list.component';
 import { AdminRentListComponent } from './admin-rent-list/admin-rent-list.component';
