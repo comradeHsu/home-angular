@@ -11,40 +11,6 @@
   height: 90%;
   background-color: #eef1f6;
 }
-#title{
-  height: 9%;
-  font-size: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-color: hsla(62,77%,76%,.3);
-  border-right-width: 1px;
-  border-right-style: solid;
-  background-color: #20a0ff;
-  margin-top: -6px;
-  background: linear-gradient(to right, rgba(0, 20, 255, 0.58) , rgba(0, 173, 255, 0.46));
-}
-.title-left{
-  height: 60px;
-  width: 15.5%;
-  margin-left: -1%;
-}
-.toggle-button{
-  float: left;
-  margin-top: -3.8%;
-  padding-left: 15%;
-}
-.headImg{
-  width: 50px;
-  height: 50px;
-  float: right;
-  margin-top: -55px;
-  padding-right: 20px;
-}
-.headImg img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
 .menu{
   height: 57px;
   line-height: 56px;
@@ -108,12 +74,7 @@ span{
   width: 200px;
   margin-left: -9px;
 }
-.banner{
-  line-height: 60px;
-  text-shadow: 5px 5px 5px #6b2d38;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  padding-left: 27px;
-}
+
 a:link{
   text-decoration:none;
 }
