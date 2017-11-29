@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {User} from '../../model/user';
-import {MatPaginatorIntl} from '@angular/material';
+import {MatPaginatorIntl, PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-admin-user-list',
@@ -10,6 +10,9 @@ import {MatPaginatorIntl} from '@angular/material';
 export class AdminUserListComponent implements OnInit {
   users: User[];
   totalCount: number;
+  name: string;
+  pageSize: number;
+  pageNumber: number;
   constructor(@Inject('user') private service,
               public matPage: MatPaginatorIntl) {
     this.matPage.itemsPerPageLabel = '每页数量:';
@@ -18,7 +21,7 @@ export class AdminUserListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getUsersPage();
+    this.getUsersPage(10, 0);
   }
 
   deleteUser(id: string) {
@@ -29,11 +32,22 @@ export class AdminUserListComponent implements OnInit {
       });
   }
 
-  getUsersPage() {
-    this.service.getUserByPage(10, 0)
+  getUsersPage(pageSize: number, pageNumber: number) {
+    this.service.getUserByPage(pageSize, pageNumber)
       .subscribe(res => {
         this.users = res.data;
         this.totalCount = res.totalCount;
       });
+  }
+
+  query() {
+    this.pageNumber = 0;
+    this.getUsersPage(this.pageSize, this.pageNumber);
+  }
+
+  changePage(page: PageEvent) {
+    this.pageNumber = page.pageIndex;
+    this.pageSize = page.pageSize;
+    this.getUsersPage(this.pageSize, this.pageNumber);
   }
 }

@@ -9,15 +9,15 @@
   <div class="content-wrapper">
     <div class="toobar">
       <mat-form-field class="in">
-        <input type="text" matInput  name="name" class="mat-input-element" placeholder="姓名"/>
+        <input type="text" matInput  name="name" [(ngModel)]="name" class="mat-input-element" placeholder="姓名"/>
       </mat-form-field>
-      <button mat-raised-button color="primary" class="mrb" type="button">查询</button>
+      <button mat-raised-button color="primary" class="mrb" type="button" (click)="query()">查询</button>
       <button mat-raised-button color="primary" class="mrb" type="button">新增</button>
     </div>
     <app-user-list [users]="users" (deletedUser)="deleteUser($event)"></app-user-list>
     <mat-paginator [length]="totalCount"
                    [pageSize]="10"
-                   [pageSizeOptions]="[10, 20, 25]">
+                   [pageSizeOptions]="[10, 20, 25]" (page)="changePage($event)">
     </mat-paginator>
 
   </div>
