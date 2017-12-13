@@ -1,7 +1,8 @@
 #docker{
   /*background-color: rgba(0, 255, 20, 0.48);*/
   float: left;
-  width: 84.5%;
+  width: -webkit-calc(100% - 200px);
+  width: calc(100% - 200px);
   height: 33.5rem;
 }
 .header{
