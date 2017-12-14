@@ -1,14 +1,12 @@
 #title{
-  height: 60px;
+  height: 55px;
   font-size: 22px;
   padding-left: 20px;
   padding-right: 20px;
-  border-color: hsla(62,77%,76%,.3);
-  border-right-width: 1px;
-  border-right-style: solid;
-  background-color: #20a0ff;
-  margin-top: -6px;
-  background: linear-gradient(to right, rgba(0, 20, 255, 0.58) , rgba(0, 173, 255, 0.46));
+  border-color: hsla(62, 77%, 76%, .3);
+  border-right: 1px solid;
+  /*margin-top: -6px;*/
+  background: #20a0ff linear-gradient(to right, rgba(0, 20, 255, 0.58), rgba(0, 173, 255, 0.46));
 }
 .title-left{
   height: 60px;
@@ -24,12 +22,12 @@
   width: 50px;
   height: 50px;
   float: right;
-  margin-top: -3.5%;
+  margin-top: -54.5px;
   padding-right: 20px;
 }
 .headImg img{
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50px;
 }
 .banner{

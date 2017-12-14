@@ -1,13 +1,13 @@
 #foot{
-  height: 40px;
-  font-size: 22px;
+  height: 35px;
+  font-size: 18px;
   border-color: hsla(62, 77%, 76%, .3);
   border-right: 1px solid;
-  margin-top: -6px;
+  /*margin-top: -6px;*/
   background: #20a0ff linear-gradient(to right, rgba(0, 20, 255, 0.74), rgba(0, 173, 255, 0.46));
   position: fixed;
   width: 100%;
-  top: calc(100% - 40px);
+  top: calc(100% - 35px);
 }
 .footer{
   width: 40%;
@@ -18,4 +18,5 @@
   line-height: 100%;
   text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-top: 10px;
 }
