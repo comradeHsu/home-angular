@@ -37,6 +37,7 @@ export class AdminRentListComponent implements OnInit {
   ngOnInit() {
     this.pageSize = 10;
     this.pageNumber = 0;
+    this.userId = window.sessionStorage.getItem('user');
     this.getPageHouses();
   }
 

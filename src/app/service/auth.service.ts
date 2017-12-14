@@ -25,7 +25,7 @@ export class AuthService {
         let response =  res.json() as Response;
         let auth = new Auth();
         if(response.status === 200) {
-          auth.user = user;
+          auth.user = response.data as User;
           auth.hasError = false;
           auth.errMsg = null;
         } else {
