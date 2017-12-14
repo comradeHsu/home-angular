@@ -1,8 +1,8 @@
 #docker{
   /*background-color: rgba(0, 255, 20, 0.48);*/
   float: left;
-  width: 84.5%;
-  height: 33.5rem;
+  width: calc(100% - 200px);
+  height: calc(100% - 90px);
 }
 .header{
   height:20px;

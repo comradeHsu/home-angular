@@ -1,7 +1,7 @@
 #docker{
-float: left;
-width: 84.5%;
-  height: 33.5rem;
-overflow-y: scroll;
-flex: 1;
+  float: left;
+  width: calc(100% - 200px);
+  height: calc(100% - 90px);
+  overflow-y: scroll;
+  flex: 1;
 }

@@ -3,7 +3,7 @@
   float: left;
   width: -webkit-calc(100% - 200px);
   width: calc(100% - 200px);
-  height: 83%;
+  height: calc(100% - 90px);
 }
 .header{
   height:20px;
