@@ -19,7 +19,7 @@
   background-color: white;
 }
 .in{
-  padding-left: 120px;
+  padding-left: 15%;
   width: 70%;
   margin-top: -10px;
 }
@@ -48,7 +48,7 @@ form:first-child{
   width: 59%;
   margin-top: 24px;
   /*height: 220px;*/ /*父元素不设置高度的话 当子元素float溢出时会自动适应*/
-  margin-left: 117px;
+  margin-left: 15%;
 }
 .upload-title{
   text-align: center;
