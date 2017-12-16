@@ -15,7 +15,7 @@ export class House {
   decorate: string;
   area: string;
   addr: string;
-  phone: string;
+  salesManPhone: string;
   status: string;
   isPublic: string;
   desc: string;
