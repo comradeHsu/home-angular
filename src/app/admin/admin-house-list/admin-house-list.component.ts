@@ -34,9 +34,8 @@ export class AdminHouseListComponent implements OnInit {
     this.matPage.itemsPerPageLabel = '每页数量:';
     this.matPage.nextPageLabel = '下一页';
     this.matPage.previousPageLabel = '上一页';
-
-    let user = window.sessionStorage['user'];
-    // this.userId = user.id;
+    this.userId = window.sessionStorage.getItem('user');
+    console.log(this.userId);
   }
 
   ngOnInit() {
