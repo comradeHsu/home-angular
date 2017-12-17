@@ -3,6 +3,7 @@
   float: left;
   width: calc(100% - 200px);
   height: calc(100% - 90px);
+  overflow: scroll;
 }
 .header{
   height:20px;
@@ -56,5 +57,5 @@ app-table{
   width: 84.5%;
 }
 mat-paginator{
-  padding: 0 6% 60px;
+  padding: 0 6% 20px;
 }
