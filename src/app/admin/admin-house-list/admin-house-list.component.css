@@ -56,5 +56,5 @@ app-table{
   width: 84.5%;
 }
 mat-paginator{
-  padding: 0 6%;;
+  padding: 0 6% 60px;
 }
