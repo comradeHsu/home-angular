@@ -7,9 +7,11 @@ export class LoginGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(): boolean {
-    if (window.sessionStorage.getItem('user')) {
+    let user = window.sessionStorage.getItem('user');
+    if (user != null) {
       return true;
     }
+    this.router.navigate(['login']);
     return false;
   }
 

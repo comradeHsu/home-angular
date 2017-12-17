@@ -6,6 +6,7 @@ import { AdminRentAddComponent } from './admin-rent-add/admin-rent-add.component
 import { AdminHouseListComponent } from './admin-house-list/admin-house-list.component';
 import { AdminHouseAddComponent } from './admin-house-add/admin-house-add.component';
 import { AdminComponent } from './admin.component';
+import {LoginGuard} from '../guard/login.guard';
 /**
  * Created by Administrator on 2017/10/23.
  import { Routes } from "@angular/router/router";
@@ -15,6 +16,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [LoginGuard],
     children: [
       {
         path: '',

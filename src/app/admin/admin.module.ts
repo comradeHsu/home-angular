@@ -18,6 +18,7 @@ import {UserService} from '../service/user.service';
 import {HouseService} from '../service/house.service';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminFootComponent } from './admin-foot/admin-foot.component';
+import {LoginGuard} from '../guard/login.guard';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import { AdminFootComponent } from './admin-foot/admin-foot.component';
   providers: [
     {provide: 'share', useClass: ShareService},
     {provide: 'user', useClass: UserService},
-    {provide: 'house', useClass: HouseService}
+    {provide: 'house', useClass: HouseService},
+    LoginGuard
   ],
 })
 export class AdminModule { }
